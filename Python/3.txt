@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<Tourney>
+<!--比赛归类配置-->
+	<MatchGroup>
+      
+		<label    name=""  Flag="1"  >
+
+
+		</label>
+
+ 
+		<label    name="疯狂麻将"  Flag="1"  >
+    
+			<key ID="64050"    name="新手50元话费赛"   />
+			<key ID="64056"    name="高手秋卡赛"   />
+			<key ID="64063"    name="周一高手挑战赛"   />
+			<key ID="64058"    name="周三黄金VIP回馈赛"   />
+			<key ID="64064"    name="周五大师挑战赛"   />
+			<key ID="64059"    name="白金VIP回馈赛"   />
+
+		</label>
+
+
+
+
+
+
+
+		
+
+	</MatchGroup>
+
+</Tourney>   
+		
