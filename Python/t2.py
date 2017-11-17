@@ -2,10 +2,6 @@ import os
 
 #创建布局文件
 os.chdir('d:\\test')
-print ("请输入layout ID:")
-lid0=input()
-lids=lid0.split(",")
-#print(lid1)
 print ("请输入比赛名称:")
 Game_name=input()
 i=0
@@ -14,6 +10,8 @@ a=[]
 g=open('d:\\test\\ID.txt')
 a=g.read()
 g.close
+lids=a.split(",")
+
 name = [[],[]]
 index=[0]
 j=0
@@ -21,13 +19,13 @@ y=0
 with open('d:\\test\\raw.txt') as f:
     for line in f:
         for each in enumerate(line.split('\t')):
-            name[1]=name[1].replace("\r\n"," ")
             name[each[0]].append(each[1])
             if each[1]=='\n':
                 z=int((j+1)/2)
                 index.append(z)
             j+=1
 IDs,Ns = name
+index.append(len(Ns)+1)
 for x in range(len(Ns)):
     str1=Ns[x]
     Ns[x]=str1.replace("\n"," ")
@@ -62,7 +60,6 @@ for lid in lids:
 
     for i in range(index[y],index[y+1]-1):
         f.write('\n\t\t\t<key ID="'+IDs[i]+'"    name="'+Ns[i]+'"   />')
-        #i+=1
     y+=1
     f.write('\n')
 
