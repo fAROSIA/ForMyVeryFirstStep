@@ -20,7 +20,7 @@ raw=[]
 for e in range(int(num)):
     raw.append(e+1)
 
-name = [[],[]]
+name = [[],[],[]]
 index=[0]
 flag=[]
 l=0
@@ -36,7 +36,7 @@ for d in raw:
                     z=int((j+1)/2)
                     index.append(z)
                 j+=1
-    IDs,Ns = name
+    IDs,Ns,Frees = name
     index.append(len(Ns)+1)
     flag.append(len(Ns)+1)
 for x in range(len(Ns)):
@@ -76,9 +76,11 @@ for lid in lids:
         f.write('\t<label    name="'+Game_name[h]+'"  Flag="1"  >\n')	    
 
 #part3
-
         for i in range(index[y],index[y+1]-1):
-            f.write('\n\t\t\t<key ID="'+IDs[i]+'"    name="'+Ns[i]+'"   />')
+            if Frees[i]=='免费\n':
+                f.write('\n\t<key ID="'+IDs[i]+'"    name="'+Ns[i]+'"  Sort="100" free="1" /> ')
+            else:
+                f.write('\n\t<key ID="'+IDs[i]+'"    name="'+Ns[i]+'"  Sort="100" free="0" /> ')
         y+=1
         f.write('\n')
 
