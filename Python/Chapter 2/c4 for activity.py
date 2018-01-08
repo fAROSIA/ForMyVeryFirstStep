@@ -77,11 +77,13 @@ for lid in lids:
 
     for i in range(index[y] + 1, index[y + 1]):
         if Fs[i] == '免费 ':
-            f.write('\n\t\t\t<key ID="' + IDs[i]
-                    + '"    name="' + Ns[i] + '"  Sort="100" free="1" />')
+            f.write('\n\t\t\t<key ID="' +
+                    IDs[i] +
+                    '"    name="' + Ns[i] + '"  Sort="100" free="1" />')
         else:
-            f.write('\n\t\t\t<key ID="' + IDs[i]
-                    + '"    name="' + Ns[i] + '"  Sort="100" free="0" />')
+            f.write('\n\t\t\t<key ID="' +
+                    IDs[i] +
+                    '"    name="' + Ns[i] + '"  Sort="100" free="0" />')
         k = i + 1
     y += 1
     f.write('\n')

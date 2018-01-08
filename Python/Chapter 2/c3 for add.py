@@ -62,11 +62,11 @@ for lid in lids:
             break
 
         if Fs[j] == '免费':
-            lines.insert(fl, '\n\t<key ID="' + IDs[j]
-                         + '"    name="' + Ns[j] + '"  Sort="100" free="1" />')
+            lines.insert(fl, '\n\t<key ID="' + IDs[j] +
+                         '"    name="' + Ns[j] + '"  Sort="100" free="1" />')
         else:
-            lines.insert(fl, '\n\t<key ID="' + IDs[j]
-                         + '"    name="' + Ns[j] + '"  Sort="100" free="0" />')
+            lines.insert(fl, '\n\t<key ID="' + IDs[j] +
+                         '"    name="' + Ns[j] + '"  Sort="100" free="0" />')
         fl += 1
     lines.insert(fl, '\n\n\n\n\n')
     s = ''.join(lines)
