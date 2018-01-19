@@ -26,7 +26,7 @@ for x in range(len(Ns)):
 
 
 # 写入
-f = open("随来随打.xml", 'w+')
+f = open("今日大赛.xml", 'w+')
 
 # part3
 
