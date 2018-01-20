@@ -11,6 +11,6 @@ elif tax0 <= 4500:
 elif tax0 <= 9000:
     tax = tax0 * 0.2 - 555
 gg = basic_salary + plus_t - insurence - tax
-print("Insurence:%.2s\n" (insurence))
-print("individual tax:%.2f\n" (tax))
-print("what you got:%.2f\n" (gg))
+print("Insurence:%.2f\n"%(insurence))
+print("individual tax:%.2f\n"%(tax))
+print("what you got:%.2f\n"%(gg))
