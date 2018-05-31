@@ -1,0 +1,29 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/faro/test/o1.org
+
+
+* list
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2018-05-31 Thu 12:05
+  :ARCHIVE_FILE: ~/test/o1.org
+  :ARCHIVE_OLPATH: how to learn org
+  :ARCHIVE_CATEGORY: o1
+  :END:
+
+
+1)[-] task1 [%]
+
+  1) [ ] subtask1
+
+  2) [X] subtask2
+
+  3) [ ] subtask3
+
+2)[ ] task2
++ treeroot
+ 
+ + branch1
+  
+ + branch2
