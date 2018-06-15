@@ -1,3 +1,3 @@
 # ForMyVeryFirstStep
 
-**just up some pieces of my "daily mail"
+**just up some pieces of my "daily mail"**
