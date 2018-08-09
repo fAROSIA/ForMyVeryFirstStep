@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #666;
+}
+
+.main{
+	width:1200px;
+	height:510px;
+	margin:50px auto;
+	position:relative;
+	overflow:hidden;
+}
+
+.nav {
+  margin: 0 auto;
+  border: 1px dotted #666;
+  width: 1198px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 0;
+}
+
+.active {
+  background-color: #ffcc00;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.active a {
+  font-weight: bold;
+}
+
+.nav .nav-item {
+  float: left;
+  font: 22px "Microsoft YaHei";
+  text-align: center;
+}
+
+.nav .nav-item a {
+  display: block;
+  width: 299.5px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.banner {
+  margin: 0 auto;
+  width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-slide {
+  width: 1200px;
+  height: 460px;
+  background-repeat: no-repeat;
+  float: left;
+  display: none;
+}
+
+.slide-active {
+  display: block;
+}
+
+.slide1 {
+  background-image: url(../img/1.jpg);
+}
+
+.slide2 {
+  background-image: url(../img/2.jpg);
+}
+
+.slide3 {
+  background-image: url(../img/3.jpg);
+}
+
+.slide4 {
+  background-image: url(../img/4.jpg);
+}
