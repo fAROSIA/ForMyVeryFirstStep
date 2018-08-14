@@ -1,4 +1,111 @@
-*{
-	margin:0;
-	padding:0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+  color: #14191e;
+}
+
+.header p {
+  margin: 100px auto 50px;
+  width: 400px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.main {
+  width: 1200px;
+  height: 460px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #bbb;
+}
+
+.banner {
+  width: 1200px;
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-slide {
+  width: 1200px;
+  height: 460px;
+  background-repeat: no-repeat;
+  float: left;
+  display: none;
+}
+
+.slide-active {
+  display: block;
+}
+
+.slide1 {
+  background-image: url(../img/1.jpg);
+}
+
+.slide2 {
+  background-image: url(../img/2.jpg);
+}
+
+.slide3 {
+  background-image: url(../img/3.jpg);
+}
+
+.slide4 {
+  background-image: url(../img/4.jpg);
+}
+
+.slide5 {
+  background-image: url(../img/5.jpg);
+}
+
+.button {
+  position: absolute;
+  transform: rotate(180deg);
+  top: 50%;
+  height: 80px;
+  width: 40px;
+  margin-top: -40px;
+  background: url(../img/pre.png) center center no-repeat;
+}
+
+.button:hover {
+  background-color: #333;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.next {
+  transform: rotate(0deg);
+  left: auto;
+  right: 0;
+}
+
+.dots {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  text-align: right;
+  padding-right: 24px;
+  line-height: 12px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 8px;
+  background-color: rgba(7, 17, 27, 0.4);
+  cursor: pointer;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+}
+
+.dots span.active {
+  box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+  background-color: #ffffff;
 }
