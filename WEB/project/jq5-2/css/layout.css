@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.top {
+    height: 25px;
+    background-color: #f3f5f7;
+}
