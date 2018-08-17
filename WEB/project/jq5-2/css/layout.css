@@ -7,10 +7,25 @@
     width: 1000px;
     margin: 0 auto;
     position: relative;
-    border-bottom: 1px solid #c0c0c0;
 }
 
 .top {
-    height: 25px;
+    height: 45px;
     background-color: #f3f5f7;
+}
+
+.top .wrap {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.logo {
+    height: 124px;
+    background-color: #f3f5f7;
+}
+
+.nav {
+    height: 48px;
+    background-color: #000;
 }
