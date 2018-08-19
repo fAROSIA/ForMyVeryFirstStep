@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Career Builder</title>
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
 </head>
+
 <body>
   <!-- 顶部 -->
   <div class="header">
-    <div class="logo"><img src="images/logo.png" /></div>
+    <div class="logo">
+      <img src="images/logo.png" />
+    </div>
     <div class="nav">
       <ul>
-        <li><a href="">HOME</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">GALLERY</a></li>
-        <li><a href="">FACULTY</a></li>
-        <li><a href="">EVENTS</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li>
+          <a href="">HOME</a>
+        </li>
+        <li>
+          <a href="">ABOUT</a>
+        </li>
+        <li>
+          <a href="">FACULTY</a>
+        </li>
+        <li>
+          <a href="">EVENTS</a>
+        </li>
+        <li>
+          <a href="">CONTACT</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -32,29 +45,38 @@
       <!-- 最上层内容 -->
       <div class="topMessage">
         <input class="text" type="text" name="name" size="80px" placeholder="your Name">
-        <input class="text" type="text" name="phone" size="80px" placeholder="your Phone" >
-        <input class="text" type="text" name="email" size="80px" placeholder="your Email" >
-        <textarea  name="comment" cols="79" rows="5" placeholder="Write Your Comment Here"></textarea>
+        <input class="text" type="text" name="phone" size="80px" placeholder="your Phone">
+        <input class="text" type="text" name="email" size="80px" placeholder="your Email">
+        <textarea name="comment" cols="79" rows="5" placeholder="Write Your Comment Here"></textarea>
         <div>
           <button class="button1" type="submit">SEND MESSAGE</button>
         </div>
       </div>
     </div>
     <!-- about区 -->
-    <div class="about">
+    <div class="about clearfix">
       <div class="aboutTop">
         <h1>ABOUT</h1>
         <hr/>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s.</p>
       </div>
       <div class="aboutContent">
-        <img src="images/bb3.jpg"/>
         <div class="aboutLeft">
-          <h2>&nbsp;&nbsp;A WORD <br/>&nbsp;ABOUT US</h2>
-          <p>Praesent dignissim viverra est,sed bili ben dum ligula congue non .Sed ac nislet feils gravida commodo? Suspendisseeget ullamcorper ipsum.suspendisse diam amet.<br/>
-            <button class="button2" type="submit">EXPLORE</button>
+          <h2>&nbsp;&nbsp;A WORD
+            <br/>&nbsp;ABOUT US</h2>
+          <p>Praesent dignissim viverra est,sed bili ben dum ligula congue non .Sed ac nislet feils gravida commodo? Suspendisseeget
+            ullamcorper ipsum.suspendisse diam amet.
+            <br/>
+            <button class="button2" type="button">EXPLORE</button>
           </p>
         </div>
+        <!-- 遮罩层 -->
+        <div class="leftLayer"></div>
+        <div class="mid">
+          <img src="images/bb3.jpg" />
+        </div>
+
         <div class="aboutRight">
           <div>
             <h2>70000</h2>
@@ -68,13 +90,101 @@
           </div>
         </div>
       </div>
+      <div class="aboutBottom">
+        <div class="about-item1"></div>
+        <div class="about-item2">
+          <div class="arrow"></div>
+          <div class="about-item-content">
+            <h2>Library</h2>
+            <p class="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p class="p2">Lorem Inpsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a
+              galley of type and scrambed it to make a type specimen book.</p>
+            <div class="btn3">
+              <button class="button3" type="button">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-item3"></div>
+        <div class="about-item4">
+          <div class="arrow"></div>
+          <div class="about-item-content">
+            <h2>Library</h2>
+            <p class="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p class="p2">Lorem Inpsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a
+              galley of type and scrambed it to make a type specimen book.</p>
+            <div class="btn3">
+              <button class="button3" type="button">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-item5">
+          <div class="arrow"></div>
+          <div class="about-item-content">
+            <h2>Library</h2>
+            <p class="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p class="p2">Lorem Inpsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a
+              galley of type and scrambed it to make a type specimen book.</p>
+            <div class="btn3">
+              <button class="button3" type="button">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-item6"></div>
+        <div class="about-item7">
+          <div class="arrow"></div>
+          <div class="about-item-content">
+            <h2>Library</h2>
+            <p class="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <p class="p2">Lorem Inpsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a
+              galley of type and scrambed it to make a type specimen book.</p>
+            <div class="btn3">
+              <button class="button3" type="button">EXPLORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-item8"></div>
+      </div>
     </div>
     <!-- gallery区 -->
-    <div class="gallery"></div>
+    <div class="gallery clearfix">
+      <div class="galleryTop">
+        <h1>GALLERY</h1>
+        <hr/>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s.</p>
+      </div>
+      <div class="gallery-content">
+        <div class="gallery-item">
+          <img src="./images/03-01.jpg" />
+          <div class="caption"><p>SCIENCE LAB</p></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./images/03-02.jpg" />
+          <div class="caption"><p>INDOOR STADIUM</p></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./images/03-03.jpg" />
+          <div class="caption"><p>TRANSPORTATION</p></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./images/03-04.jpg" />
+          <div class="caption"><p>KIDS ROOM</p></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./images/03-05.jpg" />
+          <div class="caption"><p>MEDITATION CLASSES</p></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./images/03-06.jpg" />
+          <div class="caption"><p>KIDS PLAY GROUND</p></div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- 页脚 -->
-  <div class="footer">
+  <div class="footer clearfix">
     <p>&copy;&nbsp;2016&nbsp;imooc.com&nbsp;京ICP备13046642号</p>
   </div>
 </body>
+
 </html>

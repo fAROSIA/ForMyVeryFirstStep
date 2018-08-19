@@ -3,26 +3,63 @@
   padding: 0;
   font-family: "Microsoft YaHei UI";
 }
-img {display: block;}
-ul {list-style-type: none;}
-a {text-decoration: none;color: #fff;}
-hr {width: 40px;color: #07cbc9; margin: 20px auto;}
+
+body {
+  min-width: 1200px;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  width: 40px;
+  border: 1px solid #07cbc9;
+  margin: 20px auto;
+}
+
+/* 头部 */
+
 .header,
 .footer {
   width: 100%;
   height: 100px;
   background-color: #07cbc9;
 }
-.header .logo img{
+
+.header {
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+}
+
+.header .logo img {
   float: left;
   height: 50px;
   margin: 25px 150px;
 }
+
+/* 导航条 */
+
 .header .nav {
   float: right;
   height: 100px;
   margin-right: 100px;
 }
+
 .header .nav ul li {
   float: left;
   line-height: 100px;
@@ -30,15 +67,22 @@ hr {width: 40px;color: #07cbc9; margin: 20px auto;}
   padding: 0 20px;
   font-weight: bold;
 }
+
 .header .nav ul li:hover {
   background-color: #000;
 }
+
+/* 条幅区 */
+
 .banner .pic img {
   width: 100%;
   height: 800px;
+  padding-top: 100px;
   position: relative;
 }
-.topLayer {
+
+.banner .topLayer {
+  min-width: 1200px;
   background-color: #000;
   opacity: 0.5;
   z-index: 1;
@@ -47,6 +91,7 @@ hr {width: 40px;color: #07cbc9; margin: 20px auto;}
   width: 100%;
   height: 800px;
 }
+
 .banner .topMessage {
   z-index: 2;
   width: 520px;
@@ -58,6 +103,7 @@ hr {width: 40px;color: #07cbc9; margin: 20px auto;}
   margin-right: -260px;
   text-align: center;
 }
+
 .banner .topMessage .text,
 .banner .topMessage textarea,
 .banner .topMessage .button1 {
@@ -65,97 +111,301 @@ hr {width: 40px;color: #07cbc9; margin: 20px auto;}
   background-color: transparent;
   color: white;
 }
+
 .banner .topMessage::placeholder {
   color: #7f7f80;
 }
+
 .banner .topMessage .text:hover,
 .banner .topMessage textarea:hover {
   border: 2px solid #07cbc9;
 }
+
 .banner .topMessage .button1:hover {
   background-color: #07cbc9;
   color: white;
   border: none;
 }
+
 .banner .topMessage .text {
   height: 40px;
   width: 490px;
   margin: 15px 10px;
   padding-left: 10px;
 }
+
 .banner .topMessage textarea {
   margin: 15px 10px;
   width: 480px;
   padding: 5px 10px;
 }
+
 .banner .topMessage .button1 {
   width: 120px;
   height: 40px;
   margin: 15px auto;
   color: #c0c0c0;
 }
+
+/* 主体部分 about部分 */
+
+.main .gallery .galleryTop,
 .main .about .aboutTop {
-  width: 650px;
-  margin: 80px auto 20px;
+  width: 100%;
+  margin: 80px auto 30px;
   text-align: center;
 }
+
+.main .gallery .galleryTop p,
 .main .about .aboutTop p {
   width: 500px;
-  height: 80px;
   margin: 20px auto;
   color: #7e7c7c;
 }
-.main .about .aboutContent img {
+
+.main .about .aboutContent {
+  width: 1250px;
+  height: 435px;
   margin: 0 auto 100px;
+  position: relative;
+}
+
+.main .about .aboutContent .mid {
+  float: left;
+  margin: 0 auto 100px;
+  padding-left: 250px;
   z-index: 1;
 }
+
 .main .about .aboutContent .aboutLeft {
   width: 370px;
-  height: 250px;
   background-color: transparent;
   text-align: left;
   z-index: 2;
   position: absolute;
-  top: -500px;
-  left: 20%;
+  top: 14px;
 }
+
 .main .about .aboutContent .aboutLeft h2 {
   font-size: 30px;
   font-weight: normal;
   padding-bottom: 10px;
 }
+
 .main .about .aboutContent .aboutLeft p {
   border: 1px solid #c0c0c0;
   padding: 30px;
 }
+
+.main .about .aboutContent .leftLayer {
+  width: 370px;
+  height: 217px;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+}
+
 .main .about .aboutContent .aboutLeft .button2 {
   width: 100px;
   height: 40px;
   margin-top: 15px;
   font-size: 16px;
-  color: white;
-  border:none;
+  color: #fff;
+  border: none;
   background-color: #000;
 }
-.main .about .aboutContent .aboutRight {
-  background-color: red;
+
+.main .about .aboutContent .aboutLeft .button2:hover {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
 }
+
 .main .about .aboutContent .aboutRight div {
+  float: left;
   width: 240px;
-  height: 150px;
   border: 1px solid #07cbc9;
   text-align: center;
   z-index: 2;
+  margin-left: 38px;
+  margin-bottom: 30px;
+  padding: 20px;
 }
+
 .main .about .aboutContent .aboutRight h2 {
-  padding: 15px;
   font-size: 30px;
 }
+
 .main .about .aboutContent .aboutRight p {
   font-size: 18px;
 }
-.footer {
+
+/* about 底部 */
+
+.main .about .aboutBottom {
+  width: 100%;
+  height: 792px;
+  margin-bottom: 65px;
+}
+
+.main .about .aboutBottom .about-item1,
+.main .about .aboutBottom .about-item3,
+.main .about .aboutBottom .about-item6,
+.main .about .aboutBottom .about-item8 {
+  display: block;
+  float: left;
+  width: 25%;
+  height: 396px;
+}
+
+.main .about .aboutBottom .about-item1 {
+  background: url(../images/b1.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.main .about .aboutBottom .about-item3 {
+  background: url(../images/b2.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.main .about .aboutBottom .about-item6 {
+  background: url(../images/b3.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.main .about .aboutBottom .about-item8 {
+  background: url(../images/b4.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.main .about .aboutBottom .about-item2,
+.main .about .aboutBottom .about-item4,
+.main .about .aboutBottom .about-item5,
+.main .about .aboutBottom .about-item7 {
+  position: relative;
+  display: block;
+  float: left;
+  width: 25%;
+  height: 396px;
+  background-color: #07cbc9;
+}
+
+/* 三角形边框 */
+
+.main .about .aboutBottom .arrow {
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 30px;
+  border-color: transparent transparent transparent #07cbc9;
+  position: absolute;
+  top: 188px;
+  left: 100%;
+}
+
+.main .about .aboutBottom .about-item2 .arrow,
+.main .about .aboutBottom .about-item4 .arrow {
+  transform: rotate(180deg);
+  right: 100%;
+  left: auto;
+}
+
+.main .about .aboutBottom .about-item-content {
+  margin: 37px 52px;
+}
+
+.main .about .aboutBottom .about-item-content h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.main .about .aboutBottom .about-item-content .p1 {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.main .about .aboutBottom .about-item-content .p2 {
+  margin-top: 25px;
+  color: #dddddd;
+  font-size: 14px;
+}
+
+.main .about .aboutBottom .btn3 {
+  margin: 50px auto;
+  width: 100px;
+  height: 40px;
+}
+
+.main .about .aboutBottom .button3 {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  background-color: #000;
+}
+
+.main .about .aboutBottom .button3:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+/* gallery区域 */
+
+.gallery {
+  height: 841px;
+  margin-bottom: 65px;
+}
+
+.gallery .galleryTop {
+  margin-bottom: 50px;
+}
+
+.gallery .gallery-content {
+  width: 1280px;
+  height: 638px;
+  margin: 50px auto;
+}
+
+.gallery .gallery-content .gallery-item {
+  float: left;
+  display: block;
+  margin: 0 30px 30px 30px;
+}
+
+.gallery .gallery-content .gallery-item .caption {
+  color: #fff;
+  line-height: 64px;
+  height: 64px;
+  width: 360px;
+  background-color: #000;
+}
+
+.gallery .gallery-content .gallery-item .caption p {
+  padding-left: 20px;
+}
+
+/* 底部 */
+
+.footer p {
   text-align: center;
   line-height: 100px;
   color: #fff;
+}
+
+/* 清除浮动 */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
 }
