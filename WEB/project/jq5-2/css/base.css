@@ -1,0 +1,102 @@
+p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+select,
+input {
+  border: none;
+  outline: none;
+}
+
+/* #top 模块内样式 */
+
+.top .wrap {
+  height: 45px;
+  line-height: 45px;
+  font-size: 12px;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.top .top-left {
+  float: left;
+  padding-left: 10px;
+}
+
+.top .top-left :nth-child(1) {
+  color: #ff0800;
+}
+
+.top .top-left a {
+  padding-right: 10px;
+}
+
+.top .top-right {
+  position: relative;
+  float: right;
+  padding-right: 20px;
+}
+
+.top .top-right a {
+  position: relative;
+  float: left;
+  padding-left: 20px;
+}
+
+.top .top-right a img {
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+/* #header 模块内样式 */
+
+.header .logo {
+  width: 136px;
+  height: 48px;
+  display: inline-block;
+  line-height: 48px;
+  padding: 38px 0 38px 10px;
+}
+
+.header .logo img {
+  width: 136px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.header .search {
+  width: 678px;
+  height: 40px;
+  position: absolute;
+  left: 260px;
+  top: 38px;
+}
+
+.header .search input {
+  width: 595px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 10px;
+
+}
+
+.header .search input::-webkit-input-placeholder {
+  color: #acacac;
+}
+
+.header .search a {
+  float: right;
+  width: 73px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
