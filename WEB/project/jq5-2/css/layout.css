@@ -35,9 +35,9 @@
 
 .banner {
   width: 982px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   height: 505px;
-  padding: 8px 0 0 208px;
+  padding: 8px 0 0 216px;
 }
 
 .banner-slider {

@@ -70,6 +70,7 @@ input {
   vertical-align: middle;
 }
 
+/* 搜索栏 */
 .header .search {
   width: 678px;
   height: 40px;
@@ -82,7 +83,7 @@ input {
   width: 595px;
   height: 40px;
   line-height: 40px;
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 10px;
 
 }
@@ -96,7 +97,56 @@ input {
   width: 73px;
   height: 40px;
   line-height: 40px;
+  font-size: 14px;
   background-color: #000;
   color: #fff;
   text-align: center;
+}
+
+/* 购物车 */
+.header .cart {
+  position: absolute;
+  width: 160px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f01414;
+  top: 38px;
+  right: 5px;
+}
+
+.header .cart a {
+  color: #fff;
+}
+
+.header .cart a:before{
+  background: url(../img/icon/26.png) no-repeat center;
+}
+
+.nav .link {
+  display: inline-block;
+  line-height: 48px;
+  height: 48px;
+  text-align: center;
+  margin-left: 30px;
+  color: #fff;
+  min-width: 80px;
+  font-size: 16px;
+}
+
+.nav .menu {
+  width: 208px;
+  margin-left: 0;
+  background-color: #f01414;
+  opacity: 0.9;
+  position: relative;
+}
+.nav .menu .menu-list {
+  background-color: #f01414;
+  width: 100%;
+  height: 518px;
+  position: absolute;
+  left: 0;
+  top: 48px;
 }
