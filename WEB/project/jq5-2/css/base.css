@@ -146,6 +146,7 @@ input {
 }
 
 /* 导航栏 */
+
 .nav .link {
   display: inline-block;
   line-height: 48px;
@@ -178,6 +179,7 @@ input {
 }
 
 /* 导航栏第一个导航菜单 */
+
 .nav .menu .menu-list {
   background-color: #f01414;
   width: 100%;
@@ -207,7 +209,7 @@ input {
   top: 0;
 }
 
-.nav .menu .menu-list .ui-menu-item a{
+.nav .menu .menu-list .ui-menu-item a {
   color: #fff;
 }
 
@@ -237,6 +239,7 @@ input {
 }
 
 /* 缩略图快捷区 */
+
 .main .banner .banner-quicklist .quicklist-item {
   float: left;
   display: block;
@@ -259,6 +262,7 @@ input {
   background: url("../img/icon/1.png") no-repeat 50% 40%;
   background-size: 25px 25px;
 }
+
 .main .banner .banner-quicklist .quicklist-item:nth-child(2) {
   background: url("../img/icon/2.png") no-repeat 50% 40%;
   background-size: 25px 25px;
@@ -268,6 +272,7 @@ input {
   background: url("../img/icon/3.png") no-repeat 50% 40%;
   background-size: 25px 25px;
 }
+
 .main .banner .banner-quicklist .quicklist-item:nth-child(4) {
   background: url("../img/icon/4.png") no-repeat 50% 40%;
   background-size: 25px 25px;
@@ -277,6 +282,7 @@ input {
   background: url("../img/icon/5.png") no-repeat 50% 40%;
   background-size: 25px 25px;
 }
+
 .main .banner .banner-quicklist .quicklist-item:nth-child(6) {
   background: url("../img/icon/6.png") no-repeat 50% 40%;
   background-size: 25px 25px;
@@ -286,6 +292,7 @@ input {
   background: url("../img/icon/7.png") no-repeat 50% 40%;
   background-size: 25px 25px;
 }
+
 .main .banner .banner-quicklist .quicklist-item:nth-child(8) {
   background: url("../img/icon/8.png") no-repeat 50% 40%;
   background-size: 25px 25px;
@@ -295,6 +302,7 @@ input {
   background: url("../img/icon/9.png") no-repeat 50% 40%;
   background-size: 25px 25px;
 }
+
 .main .banner .banner-quicklist .quicklist-item:nth-child(10) {
   background: url("../img/icon/10.png") no-repeat 50% 40%;
   background-size: 25px 25px;
@@ -311,7 +319,35 @@ input {
 }
 
 /* 广告区 */
+
 .main .banner .banner-ad {
   background: url('../img/ad.png') no-repeat center;
   cursor: pointer;
+}
+
+/* floor区 */
+
+.main .floor-content .caption {
+  height: 23px;
+  line-height: 23px;
+  padding: 0 0 25px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid red;
+}
+
+.main .floor-content .caption .others {
+  float: right;
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.main .floor-content .caption .others a {
+  color: #989993;
+}
+
+.main .floor-content .floor-list .floor-list-item {
+  display: inline-block;
+  width: 195px;
+  height: 222px;
 }
