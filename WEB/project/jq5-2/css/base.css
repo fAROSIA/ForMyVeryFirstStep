@@ -332,6 +332,11 @@ input {
 /* floor区 */
 
 /* floor 标题栏 */
+
+.main .floor-content {
+  margin-bottom: 55px;
+}
+
 .main .floor-content .floor-title {
   padding-bottom: 15px;
   border-bottom: 1px solid #f21318;
@@ -373,13 +378,14 @@ input {
 
 .main .floor-content .floor-title .others .others-active {
   background: url('../img/floor-arrow.png') no-repeat;
-  background-position: 18% 100%;
+  background-position: 50% 100%;
   position: relative;
   top: 1px;
   color: #ee1212;
 }
 
-/* floor内容部分 */
+/* floor每层内容 */
+
 .main .floor-content .floor-list .floor-list-item {
   display: inline-block;
   text-align: center;
@@ -397,4 +403,43 @@ input {
   display: block;
   margin-top: 10px;
   color: #f01420;
+}
+
+/* 友情链接 */
+
+.linklist .link-content {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 37px;
+  padding: 0 20px 0;
+  width: 256px;
+  height: 100px;
+}
+
+.linklist .link-content .link-caption {
+  font-size: 15px;
+}
+
+.linklist .link-content .link-item {
+  display: inline-block;
+  padding: 10px 10px 0 0;
+  font-size: 12px;
+  color: #8d9099;
+}
+
+/* 底部 */
+
+.footer {
+  padding-top: 32px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer .footer-item a {
+  color: #7e7980;
+}
+
+.footer .copyright {
+  margin-top: 12px;
+  color: #7e7980;
 }
