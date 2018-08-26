@@ -1,3 +1,7 @@
+body {
+  font-family: "Microsoft YaHei";
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -131,7 +135,7 @@ input {
   position: absolute;
   left: 15px;
   top: 13px;
-  background: url('../img/icon/26.png') 0 0 no-repeat
+  background: url('../img/icon/26.png') 0 0 no-repeat;
 }
 
 .header .cart span:after {
@@ -142,7 +146,7 @@ input {
   position: absolute;
   right: 10px;
   top: 12px;
-  background: url('../img/icon/23.png') 0 0 no-repeat
+  background: url('../img/icon/23.png') 0 0 no-repeat;
 }
 
 /* 导航栏 */
@@ -175,7 +179,7 @@ input {
   position: absolute;
   left: 18px;
   top: 16px;
-  background: url('../img/icon/18.png') 0 0 no-repeat
+  background: url('../img/icon/18.png') 0 0 no-repeat;
 }
 
 /* 导航栏第一个导航菜单 */
@@ -223,7 +227,7 @@ input {
   float: right;
   padding-right: 15px;
   color: #989993;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .main .banner .banner-news .news-list .news-list-item {
@@ -327,27 +331,70 @@ input {
 
 /* floor区 */
 
-.main .floor-content .caption {
-  height: 23px;
-  line-height: 23px;
-  padding: 0 0 25px 40px;
+/* floor 标题栏 */
+.main .floor-content .floor-title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f21318;
+}
+
+.main .floor-content .floor-title .caption {
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
   font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid red;
+  font-weight: bolder;
 }
 
-.main .floor-content .caption .others {
-  float: right;
-  padding-right: 15px;
+.main .floor-content .floor-title .floor-number {
+  display: inline-block;
+  color: #fff;
   font-size: 12px;
+  display: inline-block;
+  background: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
 }
 
-.main .floor-content .caption .others a {
+.main .floor-content .floor-title .others {
+  float: right;
+  font-size: 12px;
+  color: #989993;
+  padding-right: 15px;
+}
+
+.main .floor-content .floor-title .others a {
+  display: inline-block;
+  height: 40px;
   color: #989993;
 }
 
+.main .floor-content .floor-title .others .others-active {
+  background: url('../img/floor-arrow.png') no-repeat;
+  background-position: 18% 100%;
+  position: relative;
+  top: 1px;
+  color: #ee1212;
+}
+
+/* floor内容部分 */
 .main .floor-content .floor-list .floor-list-item {
   display: inline-block;
+  text-align: center;
   width: 195px;
   height: 222px;
+  font-size: 12px;
+}
+
+.main .floor-content .floor-list .floor-list-item img {
+  display: block;
+  margin: 25px auto 20px;
+}
+
+.main .floor-content .floor-list .floor-list-item span {
+  display: block;
+  margin-top: 10px;
+  color: #f01420;
 }
