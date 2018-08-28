@@ -46,20 +46,23 @@ input {
 }
 
 .top .top-right {
-  position: relative;
+  display: block;
   float: right;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
-.top .top-right a {
-  position: relative;
+.top .top-right .top-right-list {
   float: left;
-  padding-left: 20px;
+  display: block;
+  padding: 0 20px;
+  position: relative;
+  border: 1px solid #f3f5f7;
+  border-top: none;
+  border-bottom: none;
 }
 
-.top .top-right a img {
+.top .top-right .top-right-list a img {
   vertical-align: middle;
-  padding-left: 5px;
 }
 
 /* #header 模块内样式 */
@@ -84,7 +87,7 @@ input {
   width: 678px;
   height: 40px;
   position: absolute;
-  left: 250px;
+  left: 300px;
   top: 38px;
   border: 1px solid #dcdddf;
 }
@@ -115,9 +118,8 @@ input {
 /* 购物车 */
 
 .header .cart {
-  position: absolute;
-  width: 150px;
-  height: 42px;
+  position: relative;
+  float: right;
   line-height: 42px;
   font-size: 14px;
   text-align: center;
@@ -127,8 +129,10 @@ input {
 }
 
 .header .cart a {
+  display: block;
   color: #fff;
-  padding-left: 10px;
+  width: 150px;
+  height: 42px;
 }
 
 .header .cart a:before {
@@ -446,169 +450,4 @@ input {
 .footer .copyright {
   margin-top: 12px;
   color: #7e7980;
-}
-
-/* 遮罩层 */
-
-.layer-mask {
-  display: none;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.5;
-}
-
-/* 登陆框 */
-
-.layer-pop {
-  display: none;
-}
-
-.layer-pop .layer-content {
-  z-index: 10000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 310px;
-  height: 330px;
-  display: block;
-  background: #fff;
-  font-size: 12px;
-}
-
-.layer-pop .layer-content .layer-top {
-  height: 32px;
-  width: 255px;
-  margin: 25px auto 15px;
-  font-size: 15px;
-}
-
-.layer-pop .layer-content .layer-top a {
-  margin-right: 25px;
-  display: inline-block;
-  height: 25px;
-}
-
-.layer-pop .layer-content .layer-top a.btn-active {
-  color: #e71734;
-  border-bottom: 3px solid #e50020;
-}
-
-/* 弹出层关闭按钮 */
-
-.layer-pop .layer-content .layer-top .layer-close {
-  float: right;
-  display: block;
-  cursor: pointer;
-  height: 32px;
-  width: 32px;
-}
-
-/* 弹出层展示切换 */
-
-.layer-pop .layer-content .layer-list .signIn-layer {
-  display: block;
-}
-
-.layer-pop .layer-content .layer-list .signUp-layer {
-  display: none;
-}
-
-/* 登陆框输入表单 */
-
-.layer-pop .layer-content .layer-list .signIn-layer .account,
-.layer-pop .layer-content .layer-list .signIn-layer .passwd {
-  display: block;
-  margin: 0 auto 18px;
-  border: 1px solid #7e7980;
-  height: 34px;
-  width: 233px;
-  padding-left: 20px;
-  font-size: 12px;
-}
-
-.layer-pop .layer-content .layer-list .sign-option {
-  width: 255px;
-  margin: 0 auto;
-}
-
-.layer-pop .layer-content .layer-list .sign-option a {
-  float: right;
-}
-
-.layer-pop .layer-content .layer-list .signUp-btn,
-.layer-pop .layer-content .layer-list .login-btn {
-  display: block;
-  width: 255px;
-  height: 42px;
-  margin: 20px auto 15px;
-  color: #fff;
-  background-color: #e50020;
-  cursor: pointer;
-}
-
-.layer-pop .layer-content .login-bottom {
-  display: block;
-  height: 30px;
-  width: 180px;
-  margin: 0 auto;
-}
-
-/* 注册框输入表单 */
-
-.layer-pop .layer-content .layer-list .signUp-layer .account-signUp {
-  display: block;
-  margin: 0 auto 18px;
-  border: 1px solid #7e7980;
-  height: 34px;
-  width: 233px;
-  padding-left: 20px;
-  font-size: 12px;
-}
-
-.layer-pop .layer-content .layer-list .signUp-layer .verify {
-  width: 255px;
-  height: 40px;
-  margin: 0 auto;
-  vertical-align: middle;
-}
-
-.layer-pop .layer-content .layer-list .signUp-layer .verifywd {
-  display: block;
-  float: left;
-  border: 1px solid #7e7980;
-  width: 150px;
-  padding-left: 20px;
-  font-size: 12px;
-  height: 34px;
-}
-
-.layer-pop .layer-content .layer-list .signUp-layer .verifypic {
-  display: block;
-  float: right;
-  height: 34px;
-  width: 70px;
-}
-
-/* 其他登录方式 */
-
-.layer-pop .layer-content .login-bottom img {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #b8bbbf;
-  margin: 0 12px;
-  cursor: pointer;
-}
-
-.layer-pop .layer-content .login-bottom img:hover {
-  background-color: #07bbbf;
 }

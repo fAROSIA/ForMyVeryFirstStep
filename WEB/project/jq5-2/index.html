@@ -6,31 +6,62 @@
   <title>慕淘网</title>
   <link rel="stylesheet" type="text/css" href="css/layout.css">
   <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/ui.css">
 </head>
 
 <body>
   <div class="top">
     <div class="wrap">
-      <p class="top-left">
+      <div class="top-left">
         <a href="javascript:void(0);" class="signIn-btn">亲，请登录</a>
         <a href="javascript:void(0);" class="signUp-btn">免费注册</a>
         <a href="javascript:void(0);">手机逛慕淘</a>
-      </p>
-      <p class="top-right">
-        <a href="javascript:void(0);">我的慕淘
-          <img src="./img/icon/21.png">
-        </a>
-        <a href="javascript:void(0);">收藏夹
-          <img src="./img/icon/21.png">
-        </a>
-        <a href="javascript:void(0);">商品分类</a>
-        <a href="javascript:void(0);">卖家中心
-          <img src="./img/icon/21.png">
-        </a>
-        <a href="javascript:void(0);">联系客服
-          <img src="./img/icon/21.png">
-        </a>
-      </p>
+      </div>
+      <div class="top-right">
+        <div class="top-right-list">
+          <a href="javascript:void(0);">我的慕淘
+            <img src="./img/icon/21.png">
+          </a>
+          <div class="top-right-list-item">
+            <a href="javascript:void(0);">已买到的宝贝</a>
+            <a href="javascript:void(0);">我的足迹</a>
+          </div>
+        </div>
+        <div class="top-right-list">
+          <a href="javascript:void(0);">收藏夹
+            <img src="./img/icon/21.png">
+          </a>
+          <div class="top-right-list-item">
+            <a href="javascript:void(0);">收藏的宝贝</a>
+            <a href="javascript:void(0);">收藏的店铺</a>
+          </div>
+        </div>
+        <div class="top-right-list">
+          <a href="javascript:void(0);">商品分类</a>
+        </div>
+        <div class="top-right-list">
+          <a href="javascript:void(0);">卖家中心
+            <img src="./img/icon/21.png">
+          </a>
+          <div class="top-right-list-item">
+            <a href="javascript:void(0);">免费开店</a>
+            <a href="javascript:void(0);">已卖出的宝贝</a>
+            <a href="javascript:void(0);">出售中的宝贝</a>
+            <a href="javascript:void(0);">卖家服务市场</a>
+            <a href="javascript:void(0);">卖家培训中心</a>
+            <a href="javascript:void(0);">体验中心</a>
+          </div>
+        </div>
+        <div class="top-right-list">
+          <a href="javascript:void(0);">联系客服
+            <img src="./img/icon/21.png">
+          </a>
+          <div class="top-right-list-item">
+            <a href="javascript:void(0);">消费者客服</a>
+            <a href="javascript:void(0);">卖家客服</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="header">
@@ -43,9 +74,30 @@
         <a href="javascript:void(0);" class="ui-search-submit">搜索</a>
       </div>
       <div class="cart">
-        <a href="javascript:void(0);">购物车&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-          <span>0</span>
-        </a>
+        <div class="cart-title">
+          <a href="javascript:void(0);">购物车&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <span>0</span>
+          </a>
+        </div>
+        <div class="cart-list">
+          <div class="cart-wrap">
+            <div class="cart-top">最新加入的商品</div>
+            <div class="cart-content">
+              <div class="cart-content-item">
+                <div class="item-pic"><img src="./img/cart/1.png"></div>
+                <div class="item-msg">
+                  <p>adidas 阿迪达斯 训练 男子</p>
+                  <p>￥&nbsp;777&nbsp;x&nbsp;1</p>
+                </div>
+                <div class="remove-item"><img src="./img/icon/20.png"></div>
+              </div>
+            </div>
+            <div class="cart-bottom">
+              <p>共&nbsp;27&nbsp;件商品，共计&nbsp;￥0.00</p>
+              <input type="button" value="去购物车">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -694,20 +746,24 @@
       <div class="layer-list">
         <form class="signIn-layer">
           <input class="account" type="text" placeholder="请输入登录邮箱/手机号">
+          <div class="error-msg1"></div>
           <input class="passwd" type="password" placeholder="6-16位密码，区分大小写，不能用空格">
+          <div class="error-msg2"></div>
           <div class="sign-option">
             <input type="checkbox" name="" id="auto-signin">下次自动登录
             <a href="javascript:void(0);">忘记密码</a>
           </div>
-          <input type="button" value="登陆" class="login-btn">
+          <input type="button" value="登陆" class="signIn-btn2">
         </form>
         <form class="signUp-layer">
           <input class="account-signUp" type="text" placeholder="请输入注册邮箱/手机号">
+          <div class="error-msg3"></div>
           <div class="verify">
             <input class="verifywd" type="text" placeholder="请输入验证码">
             <img class="verifypic" src="./img/verify.png">
           </div>
-          <input class="signUp-btn" type="button" value="注册" >
+          <div class="error-msg4"></div>
+          <input class="signUp-btn2" type="button" value="注册">
         </form>
       </div>
       <div class="login-bottom">

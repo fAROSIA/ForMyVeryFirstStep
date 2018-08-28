@@ -1,0 +1,317 @@
+/* 交互样式 */
+
+/* 遮罩层 */
+
+.layer-mask {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+/* 登陆框 */
+
+.layer-pop {
+  display: none;
+}
+
+.layer-pop .layer-content {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 310px;
+  display: block;
+  background: #fff;
+  font-size: 12px;
+}
+
+.layer-pop .layer-content .layer-top {
+  height: 32px;
+  width: 255px;
+  margin: 25px auto 15px;
+  font-size: 15px;
+}
+
+.layer-pop .layer-content .layer-top a {
+  margin-right: 25px;
+  display: inline-block;
+  height: 25px;
+}
+
+.layer-pop .layer-content .layer-top a.btn-active {
+  color: #e71734;
+  border-bottom: 3px solid #e50020;
+}
+
+/* 弹出层关闭按钮 */
+
+.layer-pop .layer-content .layer-top .layer-close {
+  float: right;
+  display: block;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+/* 弹出层展示切换 */
+
+.layer-pop .layer-content .layer-list .signIn-layer {
+  display: block;
+}
+
+.layer-pop .layer-content .layer-list .signUp-layer {
+  display: none;
+}
+
+/* 登陆框输入表单 */
+
+.layer-pop .layer-content .layer-list .signIn-layer .account,
+.layer-pop .layer-content .layer-list .signIn-layer .passwd {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #7e7980;
+  height: 34px;
+  width: 233px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.layer-pop .layer-content .layer-list .signIn-layer .error-msg1,
+.layer-pop .layer-content .layer-list .signIn-layer .error-msg2,
+.layer-pop .layer-content .layer-list .signUp-layer .error-msg3,
+.layer-pop .layer-content .layer-list .signUp-layer .error-msg4 {
+  height: 25px;
+  line-height: 25px;
+  width: 255px;
+  margin: 0 auto;
+  color: #e50020;
+}
+
+.layer-pop .layer-content .layer-list .sign-option {
+  width: 255px;
+  margin: 0 auto;
+}
+
+.layer-pop .layer-content .layer-list .sign-option a {
+  float: right;
+}
+
+.layer-pop .layer-content .layer-list .signUp-btn2,
+.layer-pop .layer-content .layer-list .signIn-btn2 {
+  display: block;
+  width: 255px;
+  height: 42px;
+  margin: 5px auto 15px;
+  color: #fff;
+  background-color: #e50020;
+  cursor: pointer;
+}
+
+.layer-pop .layer-content .login-bottom {
+  display: block;
+  height: 30px;
+  width: 180px;
+  margin: 0 auto;
+}
+
+/* 注册框输入表单 */
+
+.layer-pop .layer-content .layer-list .signUp-layer .account-signUp {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #7e7980;
+  height: 34px;
+  width: 233px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.layer-pop .layer-content .layer-list .signUp-layer .verify {
+  width: 255px;
+  height: 40px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.layer-pop .layer-content .layer-list .signUp-layer .verifywd {
+  display: block;
+  float: left;
+  border: 1px solid #7e7980;
+  width: 150px;
+  padding-left: 20px;
+  font-size: 12px;
+  height: 34px;
+}
+
+.layer-pop .layer-content .layer-list .signUp-layer .verifypic {
+  display: block;
+  float: right;
+  height: 34px;
+  width: 70px;
+}
+
+/* 其他登录方式 */
+
+.layer-pop .layer-content .login-bottom img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #b8bbbf;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.layer-pop .layer-content .login-bottom img:hover {
+  background-color: #07bbbf;
+}
+
+/* top右侧 */
+
+.top .top-right .top-right-list:nth-child(3):hover {
+  background-color: #f3f5f7;
+  border: 1px solid #f3f5f7;
+  border-top: none;
+  border-bottom: none;
+}
+
+.top .top-right .top-right-list:hover {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-top: none;
+  border-bottom: none;
+}
+
+.top .top-right .top-right-list-item {
+  z-index: 999;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: -1px;
+  top: 45px;
+  border: 1px solid #e7e7e7;
+  border-top: none;
+}
+
+.top .top-right .top-right-list-item a {
+  width: 100%;
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+
+.top .top-right .top-right-list .top-active {
+  display: block;
+}
+
+/* 购物车 */
+
+.header .cart {
+  width: 148px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  border-bottom: none;
+}
+
+.header .cart:hover {
+  background-color: #fff;
+}
+
+.header .cart:hover .cart-title a {
+  color: #e50020;
+}
+
+.header .cart:hover .cart-title a:before {
+  background: url('../img/icon/25.png') 0 0 no-repeat;
+}
+
+.header .cart:hover .cart-title span:after {
+  background: url('../img/icon/22.png') 0 0 no-repeat;
+}
+
+.header .cart:hover .cart-list {
+  display: block;
+}
+
+.header .cart .cart-list {
+  z-index: 999;
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: 40px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+}
+
+.header .cart .cart-list .cart-wrap {
+  height: 400px;
+  margin: 10px 20px 10px 10px;
+  position: relative;
+}
+
+.header .cart .cart-list .cart-top {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.header .cart .cart-list .cart-content {
+  height: 290px;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item {
+  display: block;
+  height: 51px;
+  padding: 7px 5px;
+  cursor: pointer;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .item-pic {
+  display: block;
+  float: left;
+  height: 49px;
+  width: 48px;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .item-msg {
+  display: block;
+  float: left;
+  line-height: 21px;
+  font-size: 14px;
+  height: 49px;
+  width: 180px;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .remove-item {
+  float: right;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+.header .cart .cart-list .cart-bottom {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+.header .cart .cart-list .cart-bottom input {
+  display: block;
+  float: right;
+  width: 100px;
+  height: 42px;
+  color: #fff;
+  background-color: #e50020;
+  cursor: pointer;
+}
