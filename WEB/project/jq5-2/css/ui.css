@@ -204,12 +204,17 @@
 }
 
 .top .top-right .top-right-list-item a {
-  width: 100%;
+  width: calc(100% - 20px);
   display: block;
   float: left;
   height: 30px;
   line-height: 30px;
   padding-left: 20px;
+}
+
+.top .top-right .top-right-list-item a:hover {
+  color: #000;
+  background-color: #cdd0d4;
 }
 
 .top .top-right .top-right-list .top-active {
@@ -248,33 +253,48 @@
 .header .cart .cart-list {
   z-index: 999;
   position: absolute;
-  display: block;
+  display: none;
   left: -1px;
   top: 40px;
-  width: 300px;
+  width: 350px;
   background-color: #fff;
   border: 1px solid #e7e7e7;
 }
 
 .header .cart .cart-list .cart-wrap {
   height: 400px;
-  margin: 10px 20px 10px 10px;
+  margin: 10px 10px 10px 10px;
   position: relative;
 }
 
+/* 购物车顶部 */
+
 .header .cart .cart-list .cart-top {
+  width: 300px;
   border-bottom: 1px solid #e7e7e7;
 }
 
+/* 购物车清单 */
+
 .header .cart .cart-list .cart-content {
   height: 290px;
+  overflow-y: scroll;
 }
 
 .header .cart .cart-list .cart-content .cart-content-item {
   display: block;
   height: 51px;
+  width: 290px;
   padding: 7px 5px;
-  cursor: pointer;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item:last-child {
+  border: none;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item:hover {
+  background-color: #f3f5f7;
 }
 
 .header .cart .cart-list .cart-content .cart-content-item .item-pic {
@@ -285,12 +305,26 @@
 }
 
 .header .cart .cart-list .cart-content .cart-content-item .item-msg {
-  display: block;
-  float: left;
+  display: inline-block;
   line-height: 21px;
-  font-size: 14px;
+  font-size: 12px;
+  padding-top: 2px;
   height: 49px;
-  width: 180px;
+  width: 160px;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .item-msg p {
+  width: 160px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .item-msg p:first-child {
+  cursor: pointer;
+}
+
+.header .cart .cart-list .cart-content .cart-content-item .item-msg p:first-child:hover {
+  color: #e71734;
 }
 
 .header .cart .cart-list .cart-content .cart-content-item .remove-item {
@@ -298,9 +332,13 @@
   display: block;
   height: 32px;
   width: 32px;
+  cursor: pointer;
 }
 
+/* 购物车底部 */
+
 .header .cart .cart-list .cart-bottom {
+  width: 300px;
   border-top: 1px solid #e7e7e7;
   padding-top: 15px;
   font-size: 12px;
@@ -315,3 +353,85 @@
   background-color: #e50020;
   cursor: pointer;
 }
+
+/* 左侧菜单栏 */
+
+/* .nav .link .ui-menu-item {
+  position: relative;
+} */
+
+.nav .link .ui-menu-item:hover {
+  background-color: #fff;
+}
+.nav .link .ui-menu-item:hover a{
+  color: #e71734;
+}
+/* 二级菜单 */
+.nav .link .ui-menu-item:hover .ui-menu-item-detail {
+  display: block;
+}
+
+.nav .link .ui-menu-item .ui-menu-item-detail {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 208px;
+  z-index: 9999;
+  background-color: #fff;
+  color: #000;
+  border-top: none;
+	box-shadow: 5px 5px 2px rgba(0,0,0,.1);
+  border: 1px solid #e7e7e7;
+  width: 741px;
+}
+.nav .link .ui-menu-item .ui-menu-item-detail a {
+  color: #000;
+}
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group {
+  display: block;
+  float: left;
+  width: 720px;
+  height: auto;
+  margin: 5px 10px 5px 30px ;
+  position: relative;
+}
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group:first-child {
+  margin-top: 30px;
+}
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group:last-child {
+  margin-bottom: 20px;
+}
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-caption {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  float: left;
+  font-weight: bold;
+  width: 80px;
+  text-align: right;
+}
+
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-caption span {
+  color: #989993;
+  font-weight: normal;
+}
+
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-list {
+  display: block;
+  margin-left: 80px;
+}
+
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-list a {
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin: 2px 3px;
+  color: #989993;
+  padding: 0 5px;
+}
+
+.nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-list a:hover {
+  color: #e71734;
+}
+

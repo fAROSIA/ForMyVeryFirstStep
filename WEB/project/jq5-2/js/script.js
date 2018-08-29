@@ -84,6 +84,5 @@ $(function () {
   $('.top-right-list').on('mouseout',function () {
     $(this).children(".top-right-list-item").removeClass('top-active');
   });
-  // 购物车
   
 });

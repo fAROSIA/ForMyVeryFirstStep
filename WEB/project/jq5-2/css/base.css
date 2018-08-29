@@ -170,6 +170,14 @@ input {
   font-size: 14px;
 }
 
+.nav .link:hover {
+  color: #e71734;
+}
+
+.nav .link:first-child:hover {
+  color: #fff;
+}
+
 .nav .menu {
   width: 163px;
   text-align: left;
@@ -205,17 +213,16 @@ input {
 .nav .menu .menu-list .ui-menu-item {
   padding-left: 17px;
   font-size: 14px;
-  height: 15px;
-  line-height: 15px;
-  margin-top: 20px;
-  position: relative;
+  height: 36px;
+  line-height: 36px;
+  /* position: relative; */
 }
 
 .nav .menu .menu-list .ui-menu-item .ui-menu-item-cate:after {
   content: '>';
   display: block;
   width: 15px;
-  height: 15px;
+  height: 36px;
   position: absolute;
   right: 5px;
   top: 0;
