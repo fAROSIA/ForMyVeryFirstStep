@@ -1,7 +1,5 @@
 /* 交互样式 */
-
 /* 遮罩层 */
-
 .layer-mask {
   display: none;
   z-index: 9999;
@@ -15,7 +13,6 @@
 }
 
 /* 登陆框 */
-
 .layer-pop {
   display: none;
 }
@@ -53,7 +50,6 @@
 }
 
 /* 弹出层关闭按钮 */
-
 .layer-pop .layer-content .layer-top .layer-close {
   float: right;
   display: block;
@@ -63,7 +59,6 @@
 }
 
 /* 弹出层展示切换 */
-
 .layer-pop .layer-content .layer-list .signIn-layer {
   display: block;
 }
@@ -73,7 +68,6 @@
 }
 
 /* 登陆框输入表单 */
-
 .layer-pop .layer-content .layer-list .signIn-layer .account,
 .layer-pop .layer-content .layer-list .signIn-layer .passwd {
   display: block;
@@ -124,7 +118,6 @@
 }
 
 /* 注册框输入表单 */
-
 .layer-pop .layer-content .layer-list .signUp-layer .account-signUp {
   display: block;
   margin: 0 auto;
@@ -160,7 +153,6 @@
 }
 
 /* 其他登录方式 */
-
 .layer-pop .layer-content .login-bottom img {
   display: inline-block;
   width: 30px;
@@ -176,7 +168,6 @@
 }
 
 /* top右侧 */
-
 .top .top-right .top-right-list:nth-child(3):hover {
   background-color: #f3f5f7;
   border: 1px solid #f3f5f7;
@@ -222,7 +213,6 @@
 }
 
 /* 购物车 */
-
 .header .cart {
   width: 148px;
   height: 40px;
@@ -268,14 +258,12 @@
 }
 
 /* 购物车顶部 */
-
 .header .cart .cart-list .cart-top {
   width: 300px;
   border-bottom: 1px solid #e7e7e7;
 }
 
 /* 购物车清单 */
-
 .header .cart .cart-list .cart-content {
   height: 290px;
   overflow-y: scroll;
@@ -336,7 +324,6 @@
 }
 
 /* 购物车底部 */
-
 .header .cart .cart-list .cart-bottom {
   width: 300px;
   border-top: 1px solid #e7e7e7;
@@ -355,17 +342,21 @@
 }
 
 /* 左侧菜单栏 */
-
 /* .nav .link .ui-menu-item {
   position: relative;
 } */
-
 .nav .link .ui-menu-item:hover {
   background-color: #fff;
 }
-.nav .link .ui-menu-item:hover a{
+
+.nav .link .ui-menu-item:hover a {
   color: #e71734;
 }
+
+.nav .link .ui-menu-item:hover .ui-menu-item-cate span {
+  color: #e71734;
+}
+
 /* 二级菜单 */
 .nav .link .ui-menu-item:hover .ui-menu-item-detail {
   display: block;
@@ -380,27 +371,36 @@
   background-color: #fff;
   color: #000;
   border-top: none;
-	box-shadow: 5px 5px 2px rgba(0,0,0,.1);
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, .1);
   border: 1px solid #e7e7e7;
   width: 741px;
 }
+
+.nav .link .ui-menu-item .test {
+  display: block;
+}
+
 .nav .link .ui-menu-item .ui-menu-item-detail a {
   color: #000;
 }
+
 .nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group {
   display: block;
   float: left;
-  width: 720px;
+  width: 700px;
   height: auto;
-  margin: 5px 10px 5px 30px ;
-  position: relative;
+  margin: 5px 10px 5px 30px;
+  /* position: relative; */
 }
+
 .nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group:first-child {
   margin-top: 30px;
 }
+
 .nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group:last-child {
   margin-bottom: 20px;
 }
+
 .nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-caption {
   display: block;
   height: 34px;
@@ -434,4 +434,3 @@
 .nav .link .ui-menu-item .ui-menu-item-detail .ui-menu-item-detail-group .ui-menu-item-detail-group-list a:hover {
   color: #e71734;
 }
-

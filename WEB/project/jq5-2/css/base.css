@@ -218,14 +218,13 @@ input {
   /* position: relative; */
 }
 
-.nav .menu .menu-list .ui-menu-item .ui-menu-item-cate:after {
-  content: '>';
+.nav .menu .menu-list .ui-menu-item .ui-menu-item-cate span {
   display: block;
+  float: right;
+  padding-right: 15px;
   width: 15px;
   height: 36px;
-  position: absolute;
-  right: 5px;
-  top: 0;
+  color: #fff;
 }
 
 .nav .menu .menu-list .ui-menu-item a {
