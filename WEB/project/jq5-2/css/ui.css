@@ -594,6 +594,7 @@
   line-height: 30px;
   text-align: center;
   font-size: 14px;
+  font-weight: bolder;
   position: relative;
   overflow: hidden;
 }
@@ -617,6 +618,10 @@
 .left-nav .left-nav-item a:hover {
   position: absolute;
   left: -30px;
+}
+
+.left-nav .left-nav-item:active {
+  transition: all 1s;
 }
 
 /* 友情链接 */

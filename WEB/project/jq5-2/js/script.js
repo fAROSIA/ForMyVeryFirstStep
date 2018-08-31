@@ -148,14 +148,30 @@ $.fn.uiFloorNav = function () {
   var ele = $('.left-nav');
   $(window).on('scroll', function () {
     var top = $(window).scrollTop();
-    var f2 = $('.floor-title .caption').eq(1).offset().top - top;
-    if ( f2 < windowHeight) {
+    var f2 = $('.floor-title').eq(1).offset().top - top;
+    if (f2 < windowHeight) {
       ele.show();
     } else {
       ele.hide();
     }
-    $('.floor-content').each(function(index,element) {
-      var
+    // 随滚动变化floor信息
+    $('.floor-title').each(function (index, element) {
+      var floorTop = $(element).offset().top - top;
+      var floorHeight = $('.floor-content').height();
+      if (floorTop < 2 * windowHeight / 5 && (floorTop + floorHeight) > 2 * windowHeight / 5 && f2 < windowHeight) {
+        $('.left-nav-item').children().css('position', '').css('left', '').css('color', '');
+        $('.left-nav-item').eq(index).children('a').css('position', 'absolute').css('left', '-30px').css('color', '#ff0000');
+      }
+    });
+    // 点击跳转floor
+    $('.left-nav-item').on('click', function () {
+      var index = $(this).index();
+      var targetTop = $('.floor-title').eq(index).offset().top;
+      $('html,body').stop(true);
+      $('html,body').animate({
+        scrollTop: targetTop
+      }, 600);
+      return;
     });
   });
 };
