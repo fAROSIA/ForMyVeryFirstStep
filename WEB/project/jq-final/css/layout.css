@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0;
   padding: 0;
 }
@@ -32,9 +32,8 @@
   background-color: #60bff2;
 }
 
-.content {
+.main {
   height: 900px;
-  background-color: red;
 }
 
 .footer {

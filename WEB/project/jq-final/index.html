@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>城市医院预约平台 - 医院详情</title>
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/ui.css">
 </head>
+
 <body>
   <div class="top">
     <div class="wrap">
@@ -44,21 +46,58 @@
       <a href="#" class="link right">社会知名医院</a>
     </div>
   </div>
-  <div class="content"></div>
+  <div class="main">
+    <div class="wrap">
+      <div class="main-top">
+        <div class="main-top-title">北京协和医院<span class="follow">关注医院</span><span class="right"><em>等级：</em>三级甲等&nbsp;&nbsp;<em>区域：</em>东城区&nbsp;&nbsp;<em>分类：</em>中国医科院所属医院</span></div>
+        <div class="main-top-content clearfix">
+          <div class="main-top-content-left">
+            <img src="./img/hospital-1.jpg">
+          </div>
+          <div class="main-top-content-mid">
+            <p>[东院]北京市东城区帅府园一号 [西院]北京市西城区大木仓胡同41号</p>
+            <p>https://www.pumch.cn/</p>
+            <p>东院咨询台：010-69155564；西院咨询台：010-68158010</p>
+            <p>东院：106,108,110,111,116,684,685到东单路口北；41,104快，814到东单路口南；1,52,728,802到东单路口西；20，25,37,39到东单路口东；103,104,420,803到新东安市场；地铁1、5号线到东单。西院：68到辟才胡同东口；更多乘车路线详见须知</p>
+          </div>
+          <div class="main-top-content-right">
+            <img src="./img/map-1.png">
+          </div>
+        </div>
+      </div>
+      <div class="main-bottom">
+        <div class="main-bottom-tab">
+          <div class="tab"></div>
+          <div class="block">
+            <div class="block-caption">开放预约科室</div>
+            <div class="block-content"></div>
+          </div>
+          <div class="block-right">
+            <div class="block-right-caption">预约规则<span>(更新时间每日8:30更新)</span></div>
+            <div class="block-right-content">
+              <dl><dt>预约周期:</dt><dd>7天</dd></dl>
+              <dl><dt>放号事件:</dt><dd>8:30</dd></dl>
+              <dl><dt>停挂事件:</dt><dd>下午14:00停止次日预约挂号(周五14:00后停挂至下周一)</dd></dl>
+              <dl><dt>退号时间:</dt><dd>就诊前一工作日14:00前取消</dd></dl>
+              <dl><dt>特殊规则:</dt><dd>①取号地点不同：西院区预约号取号地点：西院区门诊楼一层大厅挂号窗口取号。东院区预约号取号地点：东院区老门诊楼一层大厅挂号窗口或新门诊楼各楼层挂号/收费窗口取号</dd></dl>
+            </div>
+          </div>
+        </div>
+        <div class="main-bottom-content"></div>
+        <div class="man-bottom-sidebar"></div>
+      </div>
+    </div>
+  </div>
   <div id="footer" class="footer">
     Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2017慕课网版权所有
   </div>
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/ui.js"></script>
 </body>
+
 </html>
 <!-- 1、项目由两个页面组成，单击第一个页面（hospital_detail）中门诊科室的任意一项可跳转到第二个页面（scheduling）；单击第二个页面中的“返回科室列表”，可返回第一个页面
 2、两个页面的top区域、header区域、nav区域、医院简绍区域、footer区域布局样式一样；
-4、header区域：
-（2）  右侧为搜索；搜索部分可分为3个部分，左侧为按钮；中间为搜索框，要有提示文字；右侧为搜索按钮
-（3）  左侧按钮，默认显示医院，当鼠标单击时出现下拉列表，单击下拉列表的某一项时，按钮中字相应的发生改变
-（4）  当鼠标移入下拉列表的某一项时，背景颜色变为：#ebeef5
-（5）  搜索按钮，要有搜索的图标，鼠标移入时变成小手状
 6、医院简绍区域：
 （1）  背景颜色为：#F7F7F7；
 （2）  整个区域可分为上下两个部分完成，上部分左侧为医院的名字，右侧为医院的分类等；
@@ -78,16 +117,8 @@
 （6）  排班的表格及日期的显示从js中导入。
 （7）  预约规则，垂直方向上要有滚动条，内容超出部分使用滚动条显示
 （8）  下部分是“没有就诊日期”的提示，以及在文字前面添加警告小图标。
-规范【4分】
-网页文件夹管理，图片、css、js资料独立文件夹
-代码规范及添加适量注释
-网页整体【5分】
-页面整体结构使用HTML布局，网页居中显示，每个区域背景色贯穿整个页面。
-header区域【11分】
-右侧为搜索部分，搜索部分可分为3个部分，左侧为按钮，默认显示医院，当鼠标单击时出现下拉列表，单击下拉列表的某一项时，按钮中字相应的发生改变；当鼠标移入下拉列表的某一项时，背景颜色变为：#ebeef5；中间为搜索框，要有提示文字；右侧为搜索按钮，要有搜索的图标，鼠标移入时要有链接状态；
-nav区域【6分】
+
 医院简介区域【5分】
-与效果图结构保持一致；背景颜色为：#F7F7F7；
 整体可分为上下两部分，上部分左侧为医院的名字，右侧为医院的分类等。下部分，与上部分之间有横线分割，左侧为医院图片，中间为医院的简介，要有小图标，右侧为医院地址的图片；
 医院体系区域【23分】
 与效果图保持一致；此部分为一个选项卡，默认显示预约挂号部分，预约挂号部分；
