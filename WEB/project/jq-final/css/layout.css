@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -30,10 +30,6 @@ body {
 .nav {
   height: 36px;
   background-color: #60bff2;
-}
-
-.main {
-  height: 900px;
 }
 
 .footer {
