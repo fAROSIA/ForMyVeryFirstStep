@@ -1,0 +1,145 @@
+/* 科室排班表样式 */
+.main .main-bottom {
+  margin-bottom: 0;
+}
+
+.main .main-bottom .main-bottom-title {
+  width: 1000px;
+  padding: 10px;
+  line-height: 29px;
+}
+
+.main .main-bottom .main-bottom-title .scheduling-title {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.main .main-bottom .main-bottom-title .back2index {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #00b3ec;
+  margin-left: 16px;
+}
+
+/* 左侧排班表 */
+.main .main-bottom .main-bottom-content .main-bottom-content-left {
+  display: block;
+  width: 728px;
+  height: 324px;
+  float: left;
+  /* border-left: 1px solid #e5e5e5; */
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-left,
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-right {
+  width: 34px;
+  float: left;
+  height: 324px;
+  background: #f2f8ff;
+  font-size: 14px;
+  border-right: 1px solid #e5e5e5;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-left a {
+  display: inline-block;
+  width: 34px;
+  height: 47px;
+  background: url('../img/icon-scheduling-left.jpg') no-repeat;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-left ul {
+  float: left;
+  list-style: none;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-left ul li {
+  width: 34px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-mid {
+  float: left;
+  width: 658px;
+  height: 324px;
+  overflow: hidden;
+  position: relative;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-right {
+  border-right: none;
+  border-left: 1px solid #e5e5e5;
+}
+.main .main-bottom .main-bottom-content .main-bottom-content-left .table-right .btn-r {
+  display: inline-block;
+  width: 34px;
+  height: 47px;
+  background: url('../img/icon-scheduling-right.jpg') no-repeat;
+}
+/* 右侧预约规则 */
+.main .main-bottom .main-bottom-content .main-bottom-content-right {
+  width: 268px;
+  float: left;
+  display: block;
+  border: 1px solid #dcdddd;
+  border-left: none;
+  overflow: hidden;
+}
+
+.main .main-bottom .main-bottom-content .main-bottom-content-right .right-content {
+  height: 304px;
+  width: 258px;
+  padding: 20px 0 0 10px;
+  font-size: 14px;
+  overflow: auto;
+}
+
+.main .main-bottom .main-bottom-content .main-bottom-content-right .right-content h4 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.main .main-bottom .main-bottom-content .main-bottom-content-right .right-content dl {
+  font-size: 12px;
+  padding-bottom: 5px;
+  color: #888;
+  overflow: hidden;
+}
+
+.main .main-bottom .main-bottom-content .main-bottom-content-right .right-content dl dt {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  color: #555;
+  width: 68px;
+}
+
+.main .main-bottom .main-bottom-content .main-bottom-content-right .right-content dl dd {
+  display: inline-block;
+  float: left;
+  width: 170px;
+  font-weight: normal;
+}
+
+/* 预约提示 */
+.main .tip {
+  border: 1px solid #dcdddd;
+  border-top: none;
+  margin-bottom: 100px;
+  width: 997px;
+}
+.main .tip p{
+  display: inline-block;
+  padding: 30px 0;
+  width: 997px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: #9f9f9f;
+}
+.main .tip p img{
+  display: inline-block;
+  line-height: 30px;
+  height: 20px;
+  vertical-align: middle;
+}
