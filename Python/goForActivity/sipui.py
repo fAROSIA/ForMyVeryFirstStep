@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 import xlrd
 import os
+import sys
 
 
 def xmlFormater(pathRaw, sheetIndex=0):
@@ -101,16 +102,21 @@ layout = [[sg.Text('Filename', size=(12, 1)),
            sg.Input(),
            sg.FolderBrowse()], [sg.Submit()]]
 button, values = sg.Window('Layout Transformer').Layout(layout).Read()
+path00 = os.path.abspath(sys.path[0])
 # 比赛列表路径
 pathRaw = values[0]
+if (pathRaw == ''):
+    button = ''
 # 布局文件存储路径
 path2Store = values[1]
-index = 0
-left = 0
-text, content = xmlFormater(pathRaw)
-right = len(content)
-gameName = content[0][0]
+if (path2Store == ''):
+    path2Store = path00
 if (button == 'Submit'):
+    index = 0
+    left = 0
+    text, content = xmlFormater(pathRaw)
+    right = len(content)
+    gameName = content[0][0]
     for i in range(left, right):
         if content[i][0] != gameName:
             index = i
@@ -123,3 +129,5 @@ if (button == 'Submit'):
         writeFile(path2Store, arr2add, gameName)
         write181(pathRaw, path2Store)
     print('layouts done!')
+else:
+    print("you didn't complete the details")
