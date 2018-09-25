@@ -1,12 +1,12 @@
+import PySimpleGUI as sg
 import xlrd
 import os
 
 
-def xmlFormater(sheetIndex=0):
+def xmlFormater(pathRaw, sheetIndex=0):
     arr = []
     arr1 = []
-    workbook = xlrd.open_workbook(
-        'c:\\Users\\duandz\\Desktop\\Act\\test\\raw.xls')
+    workbook = xlrd.open_workbook(pathRaw)
     sheet = workbook.sheet_by_index(sheetIndex)
     for i in range(sheet.nrows):
         arr0 = sheet.row_values(i)
@@ -18,38 +18,13 @@ def xmlFormater(sheetIndex=0):
     return arr, arr1
 
 
-def writeFile(arr, gameName):
-    gameType = {
-        "经典斗地主": "900",
-        "经典麻将": "901",
-        "拖拉机": "902",
-        "德州扑克": "903",
-        "赖子斗地主": "904",
-        "二人麻将": "905",
-        "欢乐斗地主": "906",
-        "四川麻将": "907",
-        "血流成河": "908",
-        "跑得快": "909",
-        "二人斗地主": "910",
-        "推倒胡": "911",
-        "闪电斗地主": "912",
-        "大众麻将": "913",
-        "金三顺": "914",
-        "拼十": "915",
-        "保皇": "916",
-        "疯狂麻将": "917",
-        "三人麻将": "918",
-        "拱猪": "922",
-        "炒底升级": "923",
-        "百变斗地主": '924'
-    }
+def writeFile(path2Store, arr, gameName):
     xmlHeader = """<?xml version="1.0" encoding="gb2312" ?>\n\t<Tourney>\n\t<!--比赛归类配置-->\n\t\t<MatchGroup>\n\t\t\t<label\tname=""\tFlag="1">\n\t\t\t</label>\n"""
     xmlFooter = """\t\t</MatchGroup>\n\t</Tourney>"""
     arrHeader = '\t\t\t<label\tname="' + gameName + '"\tFlag="1">\n'
     arrFooter = '\t\t\t</label>\n'
-    os.chdir("c:\\Users\\duandz\\Desktop\\Act\\test")
-    if not (os.path.exists(
-            "c:\\Users\\duandz\\Desktop\\Act\\test\\" + gameType[gameName])):
+    os.chdir(path2Store)
+    if not (os.path.exists(path2Store + '\\' + gameType[gameName])):
         os.mkdir(gameType[gameName])
     path0 = os.getcwd()
     path = os.path.join(path0, gameType[gameName])
@@ -67,15 +42,15 @@ def writeFile(arr, gameName):
     f.close
 
 
-def write181():
-    text1 = xmlFormater(1)
+def write181(pathRaw, path2Store):
+    text1 = xmlFormater(pathRaw, 1)
     text11 = ''.join(text1[0])
-    text2 = xmlFormater(0)
+    text2 = xmlFormater(pathRaw, 0)
     text22 = ''.join(text2[0])
-    os.chdir("c:\\Users\\duandz\\Desktop\\Act\\test")
-    if not (os.path.exists("c:\\Users\\duandz\\Desktop\\Act\\test\\181")):
+    os.chdir(path2Store)
+    if not (os.path.exists(path2Store + "\\181")):
         os.mkdir("181")
-    os.chdir("c:\\Users\\duandz\\Desktop\\Act\\test\\181")
+    os.chdir(path2Store + "\\181")
     f1 = open("config.ini", 'w+')
     f1.write('[attribute]\n')
     f1.write('name=随来随打，今日大赛')
@@ -95,19 +70,61 @@ def write181():
     f2.close
 
 
+gameType = {
+    "经典斗地主": "900",
+    "经典麻将": "901",
+    "拖拉机": "902",
+    "德州扑克": "903",
+    "赖子斗地主": "904",
+    "二人麻将": "905",
+    "欢乐斗地主": "906",
+    "四川麻将": "907",
+    "血流成河": "908",
+    "跑得快": "909",
+    "二人斗地主": "910",
+    "推倒胡": "911",
+    "闪电斗地主": "912",
+    "大众麻将": "913",
+    "金三顺": "914",
+    "拼十": "915",
+    "保皇": "916",
+    "疯狂麻将": "917",
+    "三人麻将": "918",
+    "拱猪": "922",
+    "炒底升级": "923",
+    "百变斗地主": '924'
+}
+layout = [[sg.Text('Filename', size=(12, 1)),
+           sg.Input(),
+           sg.FileBrowse()],
+          [sg.Text('Foldername', size=(12, 1)),
+           sg.Input(),
+           sg.FolderBrowse()], [sg.Checkbox('create181',
+                                            sg.Ok())], [sg.Submit()]]
+button, values = sg.Window('Layout Transformer').Layout(layout).Read()
+# 比赛列表路径
+pathRaw = values[0]
+# 布局文件存储路径
+path2Store = values[1]
+# 是否创建随来随打和今日大赛
+flagFor181 = values[2]
 index = 0
 left = 0
-text, content = xmlFormater()
+text, content = xmlFormater(pathRaw)
 right = len(content)
 gameName = content[0][0]
-for i in range(left, right):
-    if content[i][0] != gameName:
-        index = i
-        arr2add = text[left:index]
-        writeFile(arr2add, gameName)
-        left = i
-        gameName = content[i][0]
-        next
-    arr2add = text[left:]
-    writeFile(arr2add, gameName)
-write181()
+if (button == 'Submit'):
+    for i in range(left, right):
+        if content[i][0] != gameName:
+            index = i
+            arr2add = text[left:index]
+            writeFile(path2Store, arr2add, gameName)
+            left = i
+            gameName = content[i][0]
+            next
+        arr2add = text[left:]
+        writeFile(path2Store, arr2add, gameName)
+    if (flagFor181):
+        write181(pathRaw, path2Store)
+        print('todaysmatch and ready2go========done!')
+    print('layouts done!')
