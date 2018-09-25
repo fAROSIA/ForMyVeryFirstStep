@@ -99,15 +99,12 @@ layout = [[sg.Text('Filename', size=(12, 1)),
            sg.FileBrowse()],
           [sg.Text('Foldername', size=(12, 1)),
            sg.Input(),
-           sg.FolderBrowse()], [sg.Checkbox('create181',
-                                            sg.Ok())], [sg.Submit()]]
+           sg.FolderBrowse()], [sg.Submit()]]
 button, values = sg.Window('Layout Transformer').Layout(layout).Read()
 # 比赛列表路径
 pathRaw = values[0]
 # 布局文件存储路径
 path2Store = values[1]
-# 是否创建随来随打和今日大赛
-flagFor181 = values[2]
 index = 0
 left = 0
 text, content = xmlFormater(pathRaw)
@@ -124,7 +121,5 @@ if (button == 'Submit'):
             next
         arr2add = text[left:]
         writeFile(path2Store, arr2add, gameName)
-    if (flagFor181):
         write181(pathRaw, path2Store)
-        print('todaysmatch and ready2go========done!')
     print('layouts done!')
