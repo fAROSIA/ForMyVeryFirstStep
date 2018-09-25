@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei UI';
+}
+a {
+    text-decoration: none;
+}
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+/* 顶部 */
+header {
+    height: 94px;
+    background-color: #2e2e2e;
+}
+header > .container {
+    height: 90px;
+}
+header > .container > a {
+    display: block;
+    float: left;
+    margin: 31px 25px;
+    height: 94px;
+}
+/* 顶部导航 */
+header nav {
+    float: right;
+}
+header nav a {
+    display: block;
+    float: left;
+    width: 110px;
+    height: 94px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 94px;
+}
+/* 条幅区 */
+.banner {
+    width: 100%;
+    height: 670px;
+    background: url(../img/banner.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+/* 底部 */
+footer {
+    background-color: #2e2e2e;
+}
+footer p {
+    height: 110px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 110px;
+}
