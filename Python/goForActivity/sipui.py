@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 import xlrd
 import os
 import sys
+import json
 
 
 def xmlFormater(pathRaw, sheetIndex=0):
@@ -71,63 +72,50 @@ def write181(pathRaw, path2Store):
     f2.close
 
 
-gameType = {
-    "经典斗地主": "900",
-    "经典麻将": "901",
-    "拖拉机": "902",
-    "德州扑克": "903",
-    "赖子斗地主": "904",
-    "二人麻将": "905",
-    "欢乐斗地主": "906",
-    "四川麻将": "907",
-    "血流成河": "908",
-    "跑得快": "909",
-    "二人斗地主": "910",
-    "推倒胡": "911",
-    "闪电斗地主": "912",
-    "大众麻将": "913",
-    "金三顺": "914",
-    "拼十": "915",
-    "保皇": "916",
-    "疯狂麻将": "917",
-    "三人麻将": "918",
-    "拱猪": "922",
-    "炒底升级": "923",
-    "百变斗地主": '924'
-}
 layout = [[sg.Text('Filename', size=(12, 1)),
            sg.Input(),
            sg.FileBrowse()],
           [sg.Text('Foldername', size=(12, 1)),
            sg.Input(),
            sg.FolderBrowse()], [sg.Submit()]]
-button, values = sg.Window('Layout Transformer').Layout(layout).Read()
-path00 = os.path.abspath(sys.path[0])
-# 比赛列表路径
-pathRaw = values[0]
-if (pathRaw == ''):
-    button = ''
-# 布局文件存储路径
-path2Store = values[1]
-if (path2Store == ''):
-    path2Store = path00
-if (button == 'Submit'):
-    index = 0
-    left = 0
-    text, content = xmlFormater(pathRaw)
-    right = len(content)
-    gameName = content[0][0]
-    for i in range(left, right):
-        if content[i][0] != gameName:
-            index = i
-            arr2add = text[left:index]
+window = sg.Window('Layout Transformer').Layout(layout)
+while True:
+    button, values = window.Read()
+    if (values[0] == ''):
+        sg.Popup("error!", "please just choose a path")
+        window = sg.Window('Layout Transformer').Layout(layout)
+        continue
+    # 获取根目录
+    path00 = os.path.abspath(sys.path[0])
+    # 读取json存储的布局id与比赛类型对应表
+    jFlie = open(path00 + '\\config.json', encoding='utf-8')
+    res = jFlie.read()
+    jFlie.close()
+    gameType = json.loads(res)
+    # 比赛列表路径
+    pathRaw = values[0]
+    # 布局文件存储路径
+    path2Store = values[1]
+    if (path2Store == ''):
+        path2Store = path00
+    if (button == 'Submit'):
+        index = 0
+        left = 0
+        text, content = xmlFormater(pathRaw)
+        right = len(content)
+        gameName = content[0][0]
+        for i in range(left, right):
+            if content[i][0] != gameName:
+                index = i
+                arr2add = text[left:index]
+                writeFile(path2Store, arr2add, gameName)
+                left = i
+                gameName = content[i][0]
+                next
+            arr2add = text[left:]
             writeFile(path2Store, arr2add, gameName)
-            left = i
-            gameName = content[i][0]
-            next
-        arr2add = text[left:]
-        writeFile(path2Store, arr2add, gameName)
-        write181(pathRaw, path2Store)
-    print('layouts done!')
-else:
-    print("you didn't complete the details")
+            write181(pathRaw, path2Store)
+        sg.PopupOK('layouts done!')
+        window = sg.Window('Layout Transformer').Layout(layout)
+        continue
+    break
