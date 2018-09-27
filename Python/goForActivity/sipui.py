@@ -1,7 +1,6 @@
 import PySimpleGUI as sg
 import xlrd
 import os
-import sys
 import json
 
 
@@ -34,14 +33,14 @@ def writeFile(path2Store, arr, gameName):
     ff = open("config.ini", 'w+')
     ff.write('[attribute]\n')
     ff.write('name=' + gameName)
-    ff.close
+    ff.close()
     f = open("Layout.xml", 'w+')
     arr.append(arrFooter)
     arr.append(xmlFooter)
     arr.insert(0, arrHeader)
     arr.insert(0, xmlHeader)
     f.writelines(''.join(arr))
-    f.close
+    f.close()
 
 
 def write181(pathRaw, path2Store):
@@ -56,7 +55,7 @@ def write181(pathRaw, path2Store):
     f1 = open("config.ini", 'w+')
     f1.write('[attribute]\n')
     f1.write('name=随来随打，今日大赛')
-    f1.close
+    f1.close()
     f2 = open("Layout.xml", 'w+')
     f2.writelines(
         '''<?xml version="1.0" encoding="gb2312" ?>\n<Tourney>\n\t<!--比赛归类配置-->\n\t<MatchGroup>\n\t\t<label name="" Flag="1">\n\t\t</label>\n\t\t<label name="广告" Flag="1" ad="1">\n\t\t</label>\n\t\t        <label name="今日大赛" tnycolor="" Flag="0" id="8001" SortGroup="2">\n'''
@@ -69,7 +68,7 @@ def write181(pathRaw, path2Store):
     f2.writelines(
         '''\t\t</label>\n\t</MatchGroup>\n\t<LabelSortGroup name = "随来随打（30分钟内开始）" ShowTime = "" ShowMinutes = "30"   Position = "0" Flag = "1" id="1" />\n\t<LabelSortGroup name = "今日大赛" ShowTime = "23:59" ShowHour = "23"  Position = "1" Flag = "1" id="2" />\n</Tourney>'''
     )
-    f2.close
+    f2.close()
 
 
 layout = [[sg.Text('Filename', size=(12, 1)),
@@ -86,9 +85,13 @@ while True:
         window = sg.Window('Layout Transformer').Layout(layout)
         continue
     # 获取根目录
-    path00 = os.path.abspath(sys.path[0])
+    path00 = os.getcwd()
     # 读取json存储的布局id与比赛类型对应表
-    jFlie = open(path00 + '\\config.json', encoding='utf-8')
+    try:
+        jFlie = open(path00 + '\\config.json', encoding='utf-8')
+    except IOError:
+        sg.Popup("error!","please move config.json into root-dir")
+        break
     res = jFlie.read()
     jFlie.close()
     gameType = json.loads(res)
@@ -116,6 +119,4 @@ while True:
             writeFile(path2Store, arr2add, gameName)
             write181(pathRaw, path2Store)
         sg.PopupOK('layouts done!')
-        window = sg.Window('Layout Transformer').Layout(layout)
-        continue
     break
