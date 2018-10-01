@@ -1,0 +1,65 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+}
+
+/* 天空 */
+.sky {
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(rgb(196, 228, 253), rgb(255, 255, 255));
+	position: relative;
+}
+
+/* 云朵 */
+.cloud {
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	height: 70px;
+	width: 220px;
+	background-color: #fff;
+	display: block;
+	border-radius: 40px;
+}
+
+.cloud::before {
+	content: '';
+	display: block;
+	height: 60px;
+	width: 120px;
+	transform: rotate(60deg) translateX(-3px);
+	background-color: #fff;
+	border-radius: 35px;
+	z-index: 2;
+}
+.cloud::after {
+	content: '';
+	display: block;
+	height: 140px;
+	width: 140px;
+	border-radius: 50%;
+	background-color: #fff;
+	transform: translate(55px,-120px);
+	z-index: 2;
+}
+/* 不同云朵定位 */
+.div2 {
+	transform: scale(.8) translate(-180px, 130px);
+}
+.div3 {
+	transform: scale(.7) translate(550px, -40px);
+}
+.div4 {
+	transform: scale(.6) translate(-350px, -80px);
+}
+.div5 {
+	transform: scale(.5) translate(350px, 250px);
+}
+/* 草地 */
+.grass {
+	width: 100%;
+	height: 40%;
+	background: linear-gradient(rgb(255, 255, 255), rgb(148, 190, 89))
+}
