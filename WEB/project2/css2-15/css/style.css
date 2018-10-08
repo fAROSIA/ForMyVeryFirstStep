@@ -1,0 +1,112 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+/* 天空 */
+.sky {
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(rgb(196, 228, 253), rgb(255, 255, 255));
+	position: relative;
+}
+
+/* 云朵 */
+.cloud {
+	position: absolute;
+	height: 70px;
+	width: 220px;
+	top: 25%;
+	background-color: #fff;
+	display: block;
+	border-radius: 40px;
+}
+
+.cloud::before {
+	content: '';
+	display: block;
+	height: 60px;
+	width: 120px;
+	transform: rotate(60deg) translateX(-3px);
+	background-color: #fff;
+	border-radius: 35px;
+	z-index: 2;
+}
+
+.cloud::after {
+	content: '';
+	display: block;
+	height: 140px;
+	width: 140px;
+	border-radius: 50%;
+	background-color: #fff;
+	transform: translate(50px, -120px);
+	z-index: 2;
+}
+
+/* 不同云朵 */
+.div1 {
+	z-index: 5;
+	animation: flo 8s linear infinite;
+	right: 500px;
+}
+
+.div2 {
+	animation: flo 10s linear infinite;
+	opacity: 0.9;
+	transform: scale(.8) translateY(130px);
+	right: 680px;
+}
+
+.div3 {
+	animation: flo 14s linear infinite;
+	opacity: 0.8;
+	transform: scale(.7) translateY(-60px);
+	right: 900px;
+}
+
+.div4 {
+	animation: flo 17s linear infinite;
+	opacity: 0.8;
+	transform: scale(.6) translateY(-80px);
+	right: 180px;
+}
+
+.div5 {
+	animation: flo 22s linear infinite;
+	opacity: 0.7;
+	transform: scale(.5) translateY(250px);
+	right: 100px;
+}
+/* 动画 */
+@keyframes flo {
+	from {
+		right: -10%;
+	}
+
+	to {
+		right: 100%;
+	}
+}
+
+/* 草地 */
+.grass {
+	position: relative;
+	width: 100%;
+	height: 40%;
+	background: linear-gradient(rgb(255, 255, 255), rgb(148, 190, 89))
+}
+
+/* 兔子 */
+.grass .rabbit {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	bottom: 50px;
+	right: 200px;
+}
