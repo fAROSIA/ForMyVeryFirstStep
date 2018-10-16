@@ -1,0 +1,199 @@
+a {
+	color: #000;
+}
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+/* header */
+header .navbar-default {
+	border: none;
+	border-radius: 0;
+	background-color: #5d4b33;
+}
+
+/* logo */
+#logo {
+	color: #ffffff;
+	font-size: 40px;
+}
+
+/* 左侧导航 */
+.nav {
+	margin-left: 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	padding: 15px 20px;
+	border-right: 1px solid #888888;
+	color: #ffffff;
+	transition: all .5s;
+}
+.navbar-default .navbar-nav:first-child > li:nth-of-type(1) > a,
+.navbar-default .navbar-nav:first-child > li:nth-of-type(5) > a {
+	border: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #f07818;
+	color: #ffffff;
+	transition: all .5s;
+}
+
+.top-nav:hover {
+	background-color: #f07818;
+}
+
+/* 左侧下拉列表 */
+.navbar-default .navbar-nav:first-child .dropdown-menu {
+	padding: 10px 30px 40px;
+	width: 600px;
+}
+
+.navbar-default .navbar-nav:first-child .dropdown-menu .left {
+	float: left;
+	margin-right: 20px;
+	width: 130px;
+}
+
+.navbar-default .navbar-nav:first-child .dropdown-menu .left h3 a {
+	color: #f07818;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.navbar-default .navbar-nav:first-child .dropdown-menu .left li a {
+	display: block;
+	margin: 15px 0;
+	color: #a3a3a3;
+	font-size: 14px;
+}
+
+.navbar-default .navbar-nav:first-child .dropdown-menu .left li a:hover {
+	color: #f07818;
+}
+
+/* 右侧导航 */
+.navbar-default .navbar-right > .open > a,
+.navbar-default .navbar-right > .active > a,
+.navbar-default .navbar-right > .active > a:hover,
+.navbar-default .navbar-right > .active > a:focus,
+.navbar-default .navbar-right > .open > a:hover,
+.navbar-default .navbar-right > .open > a:focus,
+.navbar-default .navbar-right > .open > a:active {
+	border-left: 1px solid #a1a1a1;
+	background-color: #5d4b33;
+}
+
+.navbar-default .navbar-right > li > a {
+	border-right: none;
+	border-left: 1px solid #a1a1a1;
+}
+.navbar-default .navbar-right > li > a:hover {
+	background-color: #5d4b33;
+}
+/* 滑过下拉 */
+.navbar-default .navbar-right > li > a:hover + .dropdown-menu,
+.navbar-default .navbar-right .dropdown-menu:hover {
+	display: block;
+}
+.navbar-default .navbar-right > .dropdown > a {
+	padding: 12px 16px;
+}
+.navbar-default .navbar-right .glyphicon {
+	font-size: 21px;
+}
+/* 右侧下拉内容 */
+/* 下拉框三角形 */
+.navbar-default .navbar-right > .dropdown > .dropdown-menu::before {
+	content: '';
+	display: inline-block;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #cccccc;
+	position: absolute;
+	top: -7px;
+	right: 20px;
+}
+.navbar-default .navbar-right > .dropdown > .dropdown-menu::after {
+	content: '';
+	display: inline-block;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid white;
+	position: absolute;
+	top: -6px;
+	right: 20px;
+}
+/* 搜索框 */
+.navbar-default .navbar-right > .dropdown:first-child > .dropdown-menu {
+	padding: 40px;
+	width: 400px;
+}
+.navbar-default .navbar-right > .dropdown:first-child > .dropdown-menu .input-group .form-control:first-child {
+	border: 1px solid #f07818;
+	border-radius: 0;
+}
+.navbar-default .navbar-right > .dropdown:first-child > .dropdown-menu .input-group .input-group-btn:last-child > .btn {
+	width: 80px;
+	border: 1px solid #f07818;
+	border-radius: 0;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #f07818;
+}
+/* 登陆表单 */
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu {
+	padding: 30px 20px 40px;
+	width: 400px;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu input {
+	border-radius: 0;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .btn,
+.navbar-default .navbar-right > .dropdown:last-child > .dropdown-menu .btn {
+	color: #ffffff;
+	background-color: #f07818;
+	border-radius: 0;
+	border: 2px solid #f07818;
+	transition: all .5s;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .btn:hover,
+.navbar-default .navbar-right > .dropdown:last-child > .dropdown-menu .btn:hover {
+	color: #f07818;
+	background-color: #ffffff;
+	transition: all .5s;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .checkbox {
+	font-style: italic;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .form-bottom {
+	text-align: center;
+	margin-top: 20px;
+	color: #9c9c9c;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .form-bottom a{
+	color: #9c9c9c;
+}
+.navbar-default .navbar-right > .dropdown:nth-child(2) > .dropdown-menu .form-bottom a:first-child{
+	margin-right: 15px;
+	color: #f07818;
+}
+/* 购物车 */
+.navbar-default .navbar-right > .dropdown:last-child > .dropdown-menu {
+	padding: 30px 10px;
+	width: 200px;
+}
+.navbar-default .navbar-right > .dropdown:last-child > .dropdown-menu p {
+	text-align: center;
+}
+.navbar-default .navbar-right > .dropdown:last-child > .dropdown-menu .btn {
+	padding: 5px;
+}
