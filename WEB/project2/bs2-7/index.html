@@ -16,7 +16,8 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -26,11 +27,12 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!-- 左侧导航栏 -->
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">生日<span
-								 class="caret"></span></a>
+							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true"
+							 aria-expanded="false">生日<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<div class="left">
 									<h3><a href="#">关系</a></h3>
@@ -48,8 +50,8 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">婚礼<span
-								 class="caret"></span></a>
+							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true"
+							 aria-expanded="false">婚礼<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<div class="left">
 									<h3><a href="#">关系</a></h3>
@@ -73,8 +75,8 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">专用<span
-								 class="caret"></span></a>
+							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true"
+							 aria-expanded="false">专用<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<div class="left">
 									<h3><a href="#">关系</a></h3>
@@ -92,8 +94,8 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商铺<span
-								 class="caret"></span></a>
+							<a href="#" class="dropdown-toggle top-nav" data-toggle="dropdown" role="button" aria-haspopup="true"
+							 aria-expanded="false">商铺<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<div class="left">
 									<h3><a href="#">关系</a></h3>
@@ -108,69 +110,279 @@
 									<li><a href="#">巧克力</a></li>
 									<li><a href="#">水果</a></li>
 								</div>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right" >
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown-" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<div class="input-group">
-									<input type="text" class="form-control">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">搜</button>
-									</span>
-								</div>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown-" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<form>
-									<div class="form-group">
-										<label for="exampleInputEmail1">Email</label>
-										<input type="email" class="form-control" id="exampleInputEmail1">
-									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Password</label>
-										<input type="password" class="form-control" id="exampleInputPassword1">
-									</div>
-									<button type="submit" class="btn btn-default btn-lg btn-block">登陆</button>
-									<div class="checkbox">
-										<label>
-											<input type="checkbox">记住
-										</label>
-									</div>
-									<div class="form-bottom">
-										<span>新用户？<a href="#">注册&nbsp;&nbsp;|</a><a href="#">忘记密码</a></span>
-									</div>
-								</form>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown-" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<p>$0.00 (0)</p>
-								<button type="submit" class="btn btn-default btn-lg btn-block">空</button>
 							</ul>
 						</li>
 					</ul>
 				</div>
+				<!-- 右侧导航栏 -->
+				<ul class="nav-right pull-right">
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="input-group">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">搜</button>
+								</span>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<form>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email</label>
+									<input type="email" class="form-control" id="exampleInputEmail1">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Password</label>
+									<input type="password" class="form-control" id="exampleInputPassword1">
+								</div>
+								<button type="submit" class="btn btn-default btn-lg btn-block">登陆</button>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox">记住
+									</label>
+								</div>
+								<div class="form-bottom">
+									<span>新用户？<a href="#">注册&nbsp;&nbsp;|</a><a href="#">忘记密码</a></span>
+								</div>
+							</form>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<p>$0.00 (0)</p>
+							<button type="submit" class="btn btn-default btn-lg btn-block">空</button>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	</header>
-	<div class="banner"></div>
-	<div class="gallery"></div>
-	<div class="subscribe"></div>
-	<div class="footer-bottom"></div>
-	<footer></footer>
+	<!-- banner区域 -->
+	<div class="banner">
+		<div class="container">
+			<!-- 栅格布局 -->
+			<div class="row">
+				<div class="banner-left col-xs-6 col-sm-6 col-md-7 col-lg-7">
+					<h1>IMOOC <span>蛋糕</span></h1>
+					<p>特别的日子，特别的你</p>
+					<button type="submit" class="btn btn-default btn-lg">SHOP NOW</button>
+				</div>
+				<div class="banner-right col-xs-6 col-sm-6 col-md-5 col-lg-5">
+					<img src="./img/2.png" class="img-responsive" alt="Responsive image">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- gallery区域 -->
+	<div class="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="gallery-items col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<div class="top">
+						<img src="./img/g1.jpg" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<!-- 星星 -->
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-4 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g2.jpg" class="img-thumbnail img-responsive spec">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g3.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g4.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g5.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g6.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"> </span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g7.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g8.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g9.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+				<div class="gallery-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<div class="top">
+						<img src="./img/g10.png" class="img-thumbnail img-responsive">
+						<div class="mask">
+							<p><span class="glyphicon glyphicon-eye-open"></span>View</p>
+							<button type="submit" class="btn btn-default btn-sm">SHOP NOW</button>
+						</div>
+					</div>
+					<h3>Lorem ipsum dolor sit</h3>
+					<p><span class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="star glyphicon glyphicon-star-empty"></span><span
+						 class="star glyphicon glyphicon-star-empty"></span><span class="price pull-right">$95.00</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- subscribe区域 -->
+	<div class="subscribe">
+		<div class="container">
+			<h1>Newsletter</h1>
+			<form>
+				<div class="input-group">
+					<input type="email" class="form-control" placeholder="Email">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Subscribe</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- footer-bottom区域 -->
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="bottom-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<h1>COMPANY</h1>
+					<ul>
+						<li class="item"><a href="#">Products</a></li>
+						<li class="item"><a href="#">Work Here</a></li>
+						<li class="item"><a href="#">Team</a></li>
+						<li class="item"><a href="#">Happenings</a></li>
+						<li class="item"><a href="#">Dealer Locator</a></li>
+					</ul>
+				</div>
+				<div class="bottom-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<h1>SERVICE</h1>
+					<ul>
+						<li class="item"><a href="#">Support</a></li>
+						<li class="item"><a href="#">FAQ</a></li>
+						<li class="item"><a href="#">Warranty</a></li>
+						<li class="item"><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="bottom-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<h1>ORDER & RETURNS</h1>
+					<ul>
+						<li class="item"><a href="#">Order Status</a></li>
+						<li class="item"><a href="#">Shipping Policy</a></li>
+						<li class="item"><a href="#">Return Policy</a></li>
+						<li class="item"><a href="#">Digital Gift Card</a></li>
+					</ul>
+				</div>
+				<div class="bottom-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<h1>LEGAL</h1>
+					<ul>
+						<li class="item"><a href="#">Privacy</a></li>
+						<li class="item"><a href="#">Terms And Conditions</a></li>
+						<li class="item"><a href="#">Social Responsibility</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer区域 -->
+	<footer>
+		<p>Copyright &copy; 2017 imooc.com All Right Reserved | 京ICP备 13046642号-2</p>
+	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="./js/bootstrap.js"></script>
-	<script>
-	</script>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
