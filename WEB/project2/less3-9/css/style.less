@@ -10,17 +10,18 @@ a {text-decoration: none;}
 		height: 560px;
 		background-color: #6a6593;
 	}
-	&  when(@name=courses){
-		height: 686px;
-		#bg-color(pale);
+	&  when(@name=course){
+		height: 990px;
+		#bg-color(white);
 	}
 	&  when(@name=footer){
-		height: 98px;
+		height: 95px;
 		#bg-color(black);
 	}
 	position: relative;
 }
-#bg-color(@name) {// 背景色定义
+// 背景色定义
+#bg-color(@name) {
 	& when(@name=black) {
 		background-color: #000;
 	}
@@ -40,14 +41,15 @@ a {text-decoration: none;}
 		background-color: #363c41;
 	}
 }
-#ft-size(@name){// 字体大小定义
+// 字体大小定义
+#ft-size(@name){
 	& when(@name=small){
 		font-size: 12px;
 	}
 	& when(@name=medium){
 		font-size: 14px;
 	}
-	& when(@name=lagre){
+	& when(@name=large){
 		font-size: 16px;
 	}
 	& when(@name=title){
@@ -57,15 +59,16 @@ a {text-decoration: none;}
 		font-size: 22px;
 	}
 }
-#color(@name){//字体颜色定义
+//字体颜色定义
+#color(@name){
 	& when(@name=dark){
 		color: #5c646b;
 	}
 	& when(@name=black){
-		color: #141914;
+		color: #07111b;
 	}
 	& when(@name=white){
-		color: #fbfbfb;
+		color: #ffffff;
 	}
 	& when(@name=yellow){
 		color: #ffcc33;
@@ -88,7 +91,7 @@ a {text-decoration: none;}
 		height: 3px;
     background-color: #fff;
     position: absolute;
-    border-radius: 4px;
+    border-radius: 5px;
 		box-shadow: 0 8px 16px rgba(7,17,27,.2);
 	}
 	&:after{
@@ -100,7 +103,7 @@ a {text-decoration: none;}
 		height: 3px;
     background-color: #fff;
     position: absolute;
-    border-radius: 4px;
+    border-radius: 5px;
 		box-shadow: 0 8px 16px rgba(7,17,27,.2);
 	}
 }
@@ -113,7 +116,7 @@ a {text-decoration: none;}
 	height: @w;
 }
 #bg-img(@src){
-	background-image: url("../img/@{src}") ;
+	background-image: url('../img/@{src}') ;
 	background-repeat:  no-repeat;
 }
 #center-h(@width){
@@ -126,16 +129,12 @@ a {text-decoration: none;}
 }
 // 无参数函数定义
 .course-box(){
-	width: 224px;
-	height: 206px;
-	float: left;
-	box-shadow: 0 4px 8px rgba(7,17,27,.1);
+	width: 285px;
+	height: 310px;
+	box-shadow: 0 8px 16px rgba(7,17,27,.2);
 	background-color: #fff;
-	position: relative;
-	margin: 0 20px 34px 0;
-	#bg-img("course-s-bg.png");
 	#decorate-bottom();
-
+	margin: 0 25px 35px 0;
 	&:nth-child(4n){
 		margin-right: 0;
 	}
@@ -193,7 +192,7 @@ a {text-decoration: none;}
 				&::after {
 					content: ' ';
 					position: absolute;
-					#bg-img("icon-new.png");
+					#bg-img('icon-new.png');
 					display: block;
 					#square(16px);
 					right: 12px;
@@ -242,6 +241,7 @@ a {text-decoration: none;}
 	// 个人信息
 	.profile {
 		.fr();
+		margin-right: 20px;
 		&__item {
 			display: block;
 			float: left;
@@ -260,12 +260,13 @@ a {text-decoration: none;}
 			left: 19px;
 			top: 19px;
 			#square(22px);
-			#bg-img("icon-1-sprite_w22.png");
 		}
 		&__cart:before{
-			background-position: 0 -22px ;
+			#bg-img('shopcar.png');
+			background-position: 0 -214px ;
 		}
 		&__message:before{
+			#bg-img('icon-1-sprite_w22.png');
 			background-position: 0 -44px ;
 		}
 		&__ava{
@@ -276,6 +277,142 @@ a {text-decoration: none;}
 			#bg-color(light);
 			#radius(50%);
 			#bg-img('ava.jpg');
+		}
+	}
+}
+.banner {
+	#layout(banner);
+	background+_: url('../img/bg.jpg');
+		.cover-background();
+}
+.course {
+	#layout(course);
+	.container {
+		width: 1230px;
+		margin: 0 auto;
+		position: relative;
+		top: -120px;
+	}
+	&__item {
+		.course-box();
+		display: inline-block;
+		border-radius: 5px;
+		position: relative;
+		&__cover {
+			width: 100%;
+			height: 172px;
+			overflow: hidden;
+			border-radius: 5px 5px 0 0;
+			img {
+				width: 100%;
+			}
+		}
+		&__content {
+			position: absolute;
+			width: 100%;
+			top: 110px;
+			padding: 30px 0 20px 0;
+			#bg-img('titlebg.png');
+			.caption {
+				margin: 0;
+				padding: 0 35px;
+				#line-height(24px);
+				#ft-size(large);
+				#color(black);
+			}
+			.times {
+				padding: 20px 0 10px;
+				margin: 0 35px;
+				border-bottom: 1px solid #ebebeb;
+				#line-height(22px);
+				#ft-size(small);
+				#color(weak);
+			}
+			.person {
+				padding-left: 1em;
+			}
+		}
+		.price {
+			position: absolute;
+			bottom: 0;
+			padding: 20px 35px;
+			#ft-size(medium);
+			#color(red);
+			#line-height(30px);
+			i{
+				font-style: normal;
+				padding: 0 3px;
+				vertical-align: super;
+			}
+		}
+	}
+	&__item:last-child {
+		margin-right: 0;
+		left: 50%;
+		margin-left: -142.5px;
+	}
+}
+.footer {
+	#layout(footer);
+	#ft-size(small);
+	.footer-link {
+		width: 1200px;
+		margin: 0 auto;
+		padding: 30px 0 16px 40px;
+		#line-height(15px);
+		&__item {
+			margin-right: 30px;
+			#color(weak);
+			&:hover {
+				#color(white);
+			}
+		}
+		
+	}
+	.footer-copy {
+		width: 1200px;
+		margin: 0 auto;
+		height: 12px;
+		padding: 0 0 0 40px;
+		#color(weak);
+	}
+	.footer-share {
+		position: absolute;
+		width: 150px;
+		height: 32px;	
+		right: 40px;
+		top: 34px;
+		&__item {
+			margin-left: 13px;
+			display: inline-block;
+			background: #000000 url('../img/footer-sprite.png');
+			background-position: 0 -279px;
+			#square(32px);
+			#radius();
+			#bg-color(weak);
+			&:nth-child(2){
+				position: relative;
+				background-position: 0 -321px;
+			}
+			&:nth-child(3){
+				background-position: 0 -363px;
+			}
+			&:hover {
+				opacity: 0.6;
+			}
+			&:nth-child(2):hover + .QR-code{
+				visibility: visible;
+			}
+		}
+		// 二维码
+		.QR-code {
+			width: 170px;
+			height: 220px;
+			position: absolute;
+			bottom: 27px;
+			left: -7px;
+			visibility: hidden;
+			#bg-img('footer-sprite.png')
 		}
 	}
 }
