@@ -313,6 +313,7 @@ a {text-decoration: none;}
 			top: 110px;
 			padding: 30px 0 20px 0;
 			#bg-img('titlebg.png');
+			transition: all .6s;
 			.caption {
 				margin: 0;
 				padding: 0 35px;
@@ -321,7 +322,7 @@ a {text-decoration: none;}
 				#color(black);
 			}
 			.times {
-				padding: 20px 0 10px;
+				padding: 30px 0 10px;
 				margin: 0 35px;
 				border-bottom: 1px solid #ebebeb;
 				#line-height(22px);
@@ -330,6 +331,19 @@ a {text-decoration: none;}
 			}
 			.person {
 				padding-left: 1em;
+			}
+			.desc {
+				padding-top: 8px;
+				margin: 0 35px;
+				#ft-size(small);
+				#color(weak);
+				visibility: hidden;
+			}
+			&:hover{
+				top: 80px;
+			}
+			&:hover .desc{
+				visibility: visible;
 			}
 		}
 		.price {
