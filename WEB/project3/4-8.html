@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Ticket</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.title {
+			height: 30px;
+			text-indent: 20px;
+			line-height: 30px;
+			font-size: 16px;
+			background-color: #2f92d1;
+			color: #ffffff;
+		}
+		.content {
+			height: 500px;
+			background-color: #eeeeee;
+		}
+		.content .wrap {
+			margin: 0 auto;
+			padding-top: 50px;
+			padding-right: 100px;
+			width: 300px;
+		}
+		.content .wrap p {
+			display: inline-block;
+			margin: 10px;
+			width: 100%;
+			text-align: right;
+			position: relative;
+		}
+		select,
+		input {
+			width: 150px;
+		}
+		.wrap p:last-child {
+			text-align: center;
+			padding-left: 30px;
+		}
+		button {
+			border-radius: 5px;
+			height: 30px;
+			width: 60px;
+			border: 1px solid transparent;
+			outline: none;
+			color: #ffffff;
+			background-color: #2375ba;
+			cursor: pointer;
+		}
+		.tips {
+			font-size: 12px;
+			text-align: left;
+			color: #ff0000;
+			position: absolute;
+			top: 3px;
+			left: 310px;
+			width: 250px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="title">用户注册</div>
+		<div class="content">
+			<div class="wrap">
+				<p>用户名：<input class="form-item" type="text" /><span class="tips"></span></p>
+				<p>登录密码：<input class="form-item" type="password" /><span class="tips"></span></p>
+				<p>确认密码：<input class="form-item" type="password" /><span class="tips"></span></p>
+				<p>姓名：<input class="form-item" type="text" /><span class="tips"></span></p>
+				<p>性别：
+					<select id="gender">
+						<option value="male">男</option>
+						<option value="female">女</option>
+					</select>
+				</p>
+				<p>身份证号码：<input class="form-item" type="text" /><span class="tips"></span></p>
+				<p>邮箱：<input class="form-item" type="email" /><span class="tips"></span></p>
+				<p>手机号码：<input class="form-item" type="number" /><span class="tips"></span></p>
+				<p><button type="submit" id="submit">提交</button></p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var formItems = document.querySelectorAll('.form-item');
+		var spans = document.querySelectorAll('.tips');
+		var submit = document.getElementById('submit');
+		var flags = [];
+		for (var i = 0, len = formItems.length; i < len; i++) {
+			flags.push(false);
+		}
+		var patterns = [
+			/^[a-z]\w{5,19}$/i,
+			/^\S{6,18}$/,
+			/.*/,
+			/^[\u4e00-\u9fa5]{2,4}$/,
+			/^\d{15}|\d{17}[\dx]$/,
+			/^([\da-z\-_\.]+)@([\da-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/i,
+			/^[a-z0-9]+(?:[._-][a-z0-9]+)*@[a-z0-9]+(?:[._-][a-z0-9]+)*\.[a-z]{2,4}$/i,
+			/^[a-z]$/,
+			/^$/,
+		];
+		var tipMsgs = [
+			'6-20位字母、数字或“_”，字母开头',
+			'数字，字母或符号，中间不能有空格',
+			'两次输入密码不一致',
+			'两位到四位的中文',
+			'请输入18位的身份证号码',
+			'邮箱格式不正确',
+			'电话号码不正确'
+		];
+		for (var i = 0, len = formItems.length; i < len; i++) {
+			formItems[i].onblur = validate(i);
+		}
+
+		function validate(i) {
+			var index = i;
+			flags[index] = false;
+			return function () {
+				// 确认密码单独验证
+				if (index == 2) {
+					if (this.value == formItems[1].value && this.value != "") {
+						spans[index].innerHTML = "ok";
+					} else {
+						spans[index].innerHTML = tipMsgs[index];
+					}
+				} else {
+					if (patterns[index].exec(this.value)) {
+						spans[index].innerHTML = "ok";
+						flags[index] = true;
+					} else {
+						spans[index].innerHTML = tipMsgs[index];
+					}
+				}
+			}
+		}
+		submit.onclick = function () {
+			if (flags.indexOf(false) != -1) {
+				var falses = [];
+				for (var i = 0, len = formItems.length; i < len; i++) {
+					if (formItems[i] == false) {
+						falses.push(i);
+					}
+				}
+				for (var i = 0, len = falses.length; i < len; i++) {
+					validate(i);
+				}
+			} else {
+				alert("验证成功！")
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		form {
+			width: 300px;
+			background: pink;
+			text-align: center;
+			padding: 30px 0;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+
+<body>
+	<form id="form">
+		<p><input type="text" name="name" id="username" placeholder="请输入账户名"></p>
+		<span></span>
+		<p><input type="text" name="chinaName" id="chinaName" placeholder="请输入中文名"></p>
+		<span></span>
+		<p><input type="email" name="eamil" id="email" placeholder="请输入邮箱"></p>
+		<span></span>
+		<p><input type="submit" value="注册" id="submit"></p>
+	</form>
+	<script type="text/javascript">
+		var spans = document.getElementsByTagName("span");
+		var username = document.getElementById("username");
+		var chinaName = document.getElementById("chinaName");
+		var email = document.getElementById("email");
+		var submit = document.getElementById("submit");
+		var inputs = [false, false, false];
+		var items = [username, chinaName, email];
+		var tips = [
+			"请输入6-8位字母、数字、下划线",
+			"请输入中文名字",
+			"请输入邮箱"
+		]
+		var pattern = [
+			/^\w{6,8}$/,
+			/^[\u4e00-\u9fa5]{2,4}$/,
+			/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/,
+		]
+		for (var i = 0, len = items.length; i < len; i++) {
+			items[i].onfocus = tip(i);
+			items[i].onblur = validate(i);
+		}
+
+		function tip(i) {
+			var index = i;
+			return function () {
+				spans[index].innerHTML = tips[index];
+			}
+		}
+
+		function validate(i) {
+			var index = i;
+			inputs[index] = false;
+			return function () {
+				if (this.value == "") {
+					spans[index].innerHTML = "不能为空";
+				} else if (pattern[index].exec(this.value)) {
+					spans[index].innerHTML = "";
+					inputs[index] = true;
+				} else {
+					spans[index].innerHTML = "格式不正确";
+				}
+			}
+		}
+		submit.onclick = function () {
+			if (inputs.indexOf(false) != -1) {
+				alert("请按照要求完整填写信息")
+			} else {
+				alert("注册成功")
+			}
+		}
+	</script>
+</body>
+
+</html>
