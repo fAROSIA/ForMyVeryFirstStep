@@ -85,7 +85,7 @@
 				</p>
 				<p>身份证号码：<input class="form-item" type="text" /><span class="tips"></span></p>
 				<p>邮箱：<input class="form-item" type="email" /><span class="tips"></span></p>
-				<p>手机号码：<input class="form-item" type="number" /><span class="tips"></span></p>
+				<p>手机号码：<input class="form-item" type="text" /><span class="tips"></span></p>
 				<p><button type="submit" id="submit">提交</button></p>
 			</div>
 		</div>
@@ -103,15 +103,13 @@
 			/^\S{6,18}$/,
 			/.*/,
 			/^[\u4e00-\u9fa5]{2,4}$/,
-			/^\d{15}|\d{17}[\dx]$/,
-			/^([\da-z\-_\.]+)@([\da-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/i,
-			/^[a-z0-9]+(?:[._-][a-z0-9]+)*@[a-z0-9]+(?:[._-][a-z0-9]+)*\.[a-z]{2,4}$/i,
-			/^[a-z]$/,
-			/^$/,
+			/^(\d{15})$|^(\d{17}[\dx])$/,
+			/^[a-z0-9]+(?:[._-][a-z0-9]+)*@[a-z0-9]+(?:[_-][a-z0-9]+)*\.([a-z]{2,4})(\.[a-z]{2})?$/i,
+			/^1((3\d)|(47)|(5[^4])|(8[^134]))\d{8}$/
 		];
 		var tipMsgs = [
 			'6-20位字母、数字或“_”，字母开头',
-			'数字，字母或符号，中间不能有空格',
+			'6-18位数字，字母或符号，中间不能有空格',
 			'两次输入密码不一致',
 			'两位到四位的中文',
 			'请输入18位的身份证号码',
@@ -124,14 +122,15 @@
 
 		function validate(i) {
 			var index = i;
-			flags[index] = false;
 			return function () {
 				// 确认密码单独验证
 				if (index == 2) {
 					if (this.value == formItems[1].value && this.value != "") {
 						spans[index].innerHTML = "ok";
+						flags[2] = true;
 					} else {
 						spans[index].innerHTML = tipMsgs[index];
+						flags[2] = false;
 					}
 				} else {
 					if (patterns[index].exec(this.value)) {
@@ -139,6 +138,7 @@
 						flags[index] = true;
 					} else {
 						spans[index].innerHTML = tipMsgs[index];
+						flags[index] = false;
 					}
 				}
 			}
@@ -147,12 +147,12 @@
 			if (flags.indexOf(false) != -1) {
 				var falses = [];
 				for (var i = 0, len = formItems.length; i < len; i++) {
-					if (formItems[i] == false) {
+					if (flags[i] == false) {
 						falses.push(i);
 					}
 				}
 				for (var i = 0, len = falses.length; i < len; i++) {
-					validate(i);
+					formItems[falses[i]].onblur();
 				}
 			} else {
 				alert("验证成功！")
