@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Ticket</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<!-- 头部 -->
+<div class="header">
+	<div class="wrap">
+		<div class="logo"></div>
+		<div class="title">慕课高铁客户服务中心|<span>客户服务</span></div>
+		<div class="faq">意见反馈</div>
+		<div class="signInUp">您好，请<span>登陆</span> | <span>注册</span></div>
+		<div class="profile">我的IMOOC</div>
+		<div class="mobile">手机版</div>
+	</div>
+</div>
+<!-- 表单部分 -->
+<div class="container">
+	<div class="wrap">
+		<div class="currentPage"></div>
+		<div class="form">
+			<div class="title"></div>
+			<div class="content">
+				<p><span>*</span>用户名：<input type="text"></p>
+				<p><span>*</span>登录密码：<input type="password"></p>
+				<p><span>*</span>确认密码：<input type="password"></p>
+				<p><span>*</span>姓名：<input type="text"></p>
+				<p><span>*</span>证件类型：
+					<select id="identity">
+						<option value="idcard">二代身份证</option>
+						<option value="hkmo">港澳通行证</option>
+						<option value="taiwan">台湾通行证</option>
+						<option value="passport">护照</option>
+					</select>
+				</p>
+				<p><span>*</span>证件号码：<input type="text"></p>
+				<p>邮箱：<input type="email"></p>
+				<p><span>*</span>手机号码：<input type="text"></p>
+				<p><span>*</span>旅客类型:
+					<select id="passenger">
+							<option value="adult">成人</option>
+							<option value="child">儿童</option>
+							<option value="student">学生</option>
+							<option value="soldier">残疾军人</option>
+							<option value="police">伤残人民警察</option>
+						</select>
+				</p>
+				<p><input type="checkbox" id="term">我已阅读并同意遵守<span>《中国铁路客户服务中心网站服务条款》</span></p>
+				<button type="submit" id="submit">下一步</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 底部 -->
+<div class="footer"></div>
+<body>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

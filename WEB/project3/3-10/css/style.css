@@ -1,0 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft YaHei';
+}
+/* 头部 */
+.header {
+	height: 130px;
+	background-color: #efefef;
+	border-bottom: 2px solid #79aed8;
+}
