@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		.wrap {
+			width: 250px;
+			height: 300px;
+			margin: 200px auto;
+			position: relative;
+		}
+
+		.cube {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			opacity: 0.8;
+		}
+
+		.red {
+			background-color: #f26845;
+			left: 100px;
+			top: 50px;
+		}
+
+		.green {
+			background-color: #8ec12e;
+			left: 150px;
+			top: 100px;
+		}
+
+		.blue {
+			background-color: #2fadef;
+			left: 100px;
+			top: 150px;
+		}
+
+		.yellow {
+			background-color: #ffc12d;
+			left: 50px;
+			top: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="cube red"></div>
+		<div class="cube green"></div>
+		<div class="cube blue"></div>
+		<div class="cube yellow"></div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script>
+		$(function () {
+			function animation() {
+				console.log('go');
+				$('.cube').queue('gogo', function () {
+					$('.red').animate({
+						top: "+=80",
+						borderRadius: "50%"
+					}, 850).animate({
+						top: "-=80",
+						borderRadius: "0"
+					}, 500);
+					$('.green').animate({
+						left: "-=80",
+						borderRadius: "50%"
+					}, 850).animate({
+						left: "+=80",
+						borderRadius: "0"
+					}, 500);
+					$('.blue').animate({
+						top: "-=80",
+						borderRadius: "50%"
+					}, 850).animate({
+						top: "+=80",
+						borderRadius: "0"
+					}, 500);
+					$('.yellow').animate({
+						left: "+=80",
+						borderRadius: "50%"
+					}, 850).animate({
+						left: "-=80",
+						borderRadius: "0"
+					}, 500);
+				})
+			}
+			setInterval(function () {
+				$('.cube').dequeue('gogo');
+				animation();
+			}, 4000)
+		})
+	</script>
+</body>
+
+</html>
