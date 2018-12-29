@@ -3,9 +3,101 @@
 	padding: 0;
 	font-family: 'Microsoft YaHei';
 }
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 /* 头部 */
 .header {
+	min-width: 1200px;
 	height: 130px;
 	background-color: #efefef;
 	border-bottom: 2px solid #79aed8;
+}
+
+.header .wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.header .title {
+	width: 500px;
+}
+
+.header .title .title-item {
+	float: left;
+	margin-left: 20px;
+	height: 110px;
+	line-height: 110px;
+	font-size: 26px;
+}
+
+.header .title .title-item span {
+	font-size: 18px;
+	vertical-align: middle;
+	color: #9c9c9c;
+}
+
+/* logo */
+.header .title .logo {
+	float: left;
+	height: 110px;
+	width: 110px;
+	background: url('../img/logo.png') center no-repeat;
+}
+
+.header .nav {
+	height: 110px;
+	line-height: 110px;
+	float: right;
+}
+
+.header .nav div {
+	float: left;
+}
+
+.header .nav .faq span,
+.header .nav .signInUp span:first-child {
+	color: rgb(251, 116, 3);
+}
+
+.header .nav span,
+.header .nav .profile,
+.header .nav .mobile {
+	cursor: pointer;
+}
+.faq {
+
+}
+/* 表单 */
+.container {
+	min-width: 1200px;
+	height: 670px;
+}
+
+/* 底部 */
+.footer {
+	min-width: 1200px;
+	text-align: center;
+	padding-top: 20px;
+	height: 80px;
+	background-color: #efefef;
+	border-top: 2px solid #79aed8;
+}
+
+.footer a,
+.footer p {
+	line-height: 30px;
+	color: #9c9c9c;
 }
