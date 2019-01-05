@@ -1,0 +1,79 @@
+/* 交互样式 */
+.profile span:hover {
+	color: rgb(251, 116, 3);
+}
+
+.profile {
+	position: relative;
+}
+
+.profile .menu {
+	position: absolute;
+	top: 70px;
+	display: none;
+	padding: 15px;
+	width: 150px;
+	border: 1px solid rgb(251, 116, 3);
+	background-color: #ffffff;
+	line-height: 20px;
+}
+
+.profile .menu a {
+	display: inline-block;
+	margin: 2px;
+	padding: 3px 0;
+	width: 140px;
+	height: 20px;
+	color: #6c6c6c;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.profile .menu a:hover {
+	color: rgb(251, 116, 3);
+}
+
+.profile .menu a:nth-of-type(2),
+.profile .menu a:nth-of-type(3),
+.profile .menu a:nth-of-type(5),
+.profile .menu a:nth-of-type(6),
+.profile .menu a:nth-of-type(8),
+.profile .menu a:nth-of-type(9) {
+	border-bottom: 1px dotted #9c9c9c;
+}
+
+/* 表单提示 */
+.msg {
+	position: absolute;
+	left: 318px;
+	color: rgb(251, 116, 3);
+	white-space: nowrap;
+}
+/* 姓名规则提示 */
+#namerule {
+	color: rgb(251, 116, 3);
+	text-decoration: underline;
+	cursor: pointer;
+}
+#rules {
+	position: absolute;
+	top: 130px;
+	left: 414px;
+	width: 470px;
+	border: 1px solid rgb(36, 135, 201);
+	z-index: 2;
+	background-color: #fff;
+	color: #9c9c9c;
+	font-size: 12px;
+	padding: 10px;
+}
+#rules li{
+	padding: 10px 5px;
+}
+.warning {
+	color: #ff0000 !important;
+}
+
+.success {
+	color: #339442 !important;
+}
