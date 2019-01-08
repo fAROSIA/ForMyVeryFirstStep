@@ -180,7 +180,8 @@ ul {
 .container .wrap .form .content>p:last-of-type input {
 	position: relative;
 	width: auto;
-	left: 0;
+	left: -5px;
+	top: -2px;
 }
 
 .container .wrap .form .content>p:last-of-type a {

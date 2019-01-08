@@ -22,7 +22,7 @@
 	var patterns = {
 		username: /^[a-z]\w{5,29}$/i,
 		passwd: /^\S{6,20}$/,
-		name: /^[a-zA-Z]{3,30}|[\u4e00-\u9fa5]{2,15}$/,
+		name: /^[a-zA-Z]{3,30}$|^[\u4e00-\u9fa5]{2,15}$/,
 		idcard: /^(\d{18})$|^(\d{17}[\dXx])$/,
 		email: /^[a-z0-9]+(?:[._-][a-z0-9]+)*@[a-z0-9]+(?:[_-][a-z0-9]+)*\.([a-z]{2,4})(\.[a-z]{2})?$/i,
 		phone: /^1[^12]\d{9}$/
@@ -59,11 +59,10 @@
 		if (/^\d{6,20}$/.test(value) || /^[a-zA-Z]{6,20}$/.test(value) || /^\W{6,20}$/.test(value)) {
 			levelBars[1].classList.remove('orange');
 			levelBars[2].classList.remove('green');
-			return;
-		} else if (/^[0-9a-z]{6,20}$/.test(value) || /^[\Wa-z]{6,20}$/.test(value)) || /^[\W0-9]{6,20}$/.test(value) {
+		} else if (/^[0-9a-z]{6,20}$/i.test(value) || /^[\Wa-z]{6,20}$/i.test(value) || /^[\W0-9]{6,20}$/.test(value)) {
 			levelBars[1].classList.add('orange');
 			levelBars[2].classList.remove('green');
-		} else if (/\W[a-zA-Z]{6,20}/.test(value)) {
+		} else if (/[\Wa-z0-9]{6,20}/i.test(value)) {
 			levelBars[1].classList.add('orange');
 			levelBars[2].classList.add('green');
 		}
@@ -105,7 +104,7 @@
 				turnGreen(i);
 				flags[i] = true;
 				if (itemID == "passwd") { //密码部分
-					validatePasswd(i, value);
+					validatePasswd(value);
 				}
 				// 绿字提示
 				msgs[i].innerHTML = correctMsgs[itemID];
@@ -118,11 +117,12 @@
 		};
 	}
 	// 提交按钮
+	var checkbox = document.querySelector('#term');
 	submit.onclick = function () {
 		for (var i = 0, len = formItems.length; i < len; i++) {
 			formItems[i].onblur();
 		}
-		if (flags.indexOf(false) == -1) {
+		if (flags.indexOf(false) == -1 && checkbox.checked) { //表单全部正确且同意条款
 			window.location.href = 'https://www.imooc.com/';
 		}
 	};
