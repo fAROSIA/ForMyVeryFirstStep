@@ -49,13 +49,16 @@
 	color: rgb(251, 116, 3);
 	white-space: nowrap;
 }
+
 /* 姓名规则提示 */
 #namerule {
 	color: rgb(251, 116, 3);
 	text-decoration: underline;
 	cursor: pointer;
 }
+
 #rules {
+	display: none;
 	position: absolute;
 	top: 130px;
 	left: 414px;
@@ -67,13 +70,51 @@
 	font-size: 12px;
 	padding: 10px;
 }
-#rules li{
-	padding: 10px 5px;
+
+#rules p {
+	line-height: 30px;
 }
+
+/* 表单验证样式 */
 .warning {
 	color: #ff0000 !important;
 }
 
-.success {
+.correct {
 	color: #339442 !important;
+}
+
+#passwdMsg {
+	margin: 0px;
+	left: 94px;
+	top: -10px;
+}
+/* 密码安全等级 */
+#passwdLevel {
+	z-index: 2;
+	position: absolute;
+	left: 320px;
+	top: 34px;
+}
+#passwdLevel span{
+	display: inline-block;
+	width: 40px;
+	height: 6px;
+	content: '';
+	background-color: #dddddd;
+}
+#passwdLevel .red {
+	background-color: #ff3d00;
+}
+#passwdLevel .orange {
+	background-color: #ffa500;
+}
+#passwdLevel .green {
+	background-color: #018000;
+}
+/* 按钮 */
+#submit:hover {
+	background-color: #ffffff;
+	color: rgb(251, 116, 3);
+	border: 1px solid rgb(251, 116, 3);
 }

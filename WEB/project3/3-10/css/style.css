@@ -156,64 +156,64 @@ ul {
 	position: relative;
 }
 
-.container .wrap .form .content p {
+.container .wrap .form .content>p {
 	position: relative;
 	margin-bottom: 16px;
 }
 
-.container .wrap .form .content p span:first-of-type {
+.container .wrap .form .content>p span:first-of-type {
 	color: rgb(251, 116, 3);
 }
 
-.container .wrap .form .content p input,
-.container .wrap .form .content p select {
+.container .wrap .form .content>p input,
+.container .wrap .form .content>p select {
 	position: absolute;
 	box-sizing: border-box;
 	width: 34%;
 	left: 15%;
 }
 
-.container .wrap .form .content p:last-of-type {
+.container .wrap .form .content>p:last-of-type {
 	text-align: center;
 }
 
-.container .wrap .form .content p:last-of-type input {
+.container .wrap .form .content>p:last-of-type input {
 	position: relative;
 	width: auto;
 	left: 0;
 }
 
-.container .wrap .form .content p:last-of-type a {
+.container .wrap .form .content>p:last-of-type a {
 	color: rgb(36, 135, 201);
 }
 
-.container .wrap .form .content p input::-webkit-input-placeholder,
+.container .wrap .form .content>p input::-webkit-input-placeholder,
 	{
 	color: #cccccc;
 	text-indent: 5px;
 }
 
-.container .wrap .form .content p input:-ms-input-placeholder {
+.container .wrap .form .content>p input:-ms-input-placeholder {
 	color: #cccccc;
 	text-indent: 5px;
 }
 
-.container .wrap .form .content p input:-moz-placeholder {
+.container .wrap .form .content>p input:-moz-placeholder {
 	color: #cccccc;
 	text-indent: 5px;
 }
 
-.container .wrap .form .content p input::-moz-placeholder {
+.container .wrap .form .content>p input::-moz-placeholder {
 	color: #cccccc;
 	text-indent: 5px;
 }
 
-.container .wrap .form .content p input::placeholder {
+.container .wrap .form .content>p input::placeholder {
 	color: #cccccc;
 	text-indent: 5px;
 }
 
-.container .wrap .form .content button {
+.container .wrap .form .content>button {
 	cursor: pointer;
 	display: block;
 	position: relative;

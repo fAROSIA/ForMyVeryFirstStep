@@ -21,7 +21,7 @@
 		<div class="nav">
 			<div class="faq">意见反馈&nbsp;&nbsp;<span>imooc@com</span></div>
 			<div class="signInUp">您好，请<span>登陆</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>&nbsp;注册&nbsp;</span></div>
-			<div class="profile"><span>我的IMOOC</span> <i class="iconfont icon-arrowdownb"></i>
+			<div class="profile" id="profile"><span>我的IMOOC</span> <i class="iconfont icon-arrowdownb"></i>
 				<div class="menu" id="menu">
 					<a href="#">未完成订单</a>
 					<a href="#">已完成订单（改/退）</a>
@@ -47,10 +47,16 @@
 		<div class="form">
 			<div class="title">账户信息</div>
 			<div class="content">
-				<p><span>*</span>用&nbsp;户&nbsp;名：<input type="text" id="username" placeholder="用户名设置成功后不可修改"><span class="msg">6-30位字母、数字或"_"，字母开头</span></p>
-				<p><span>*</span>登录密码：<input type="password" id="passwd" placeholder="6-20位字母、数字或符号"><span class="msg"><a href="#"></a></span></p>
-				<p><span>*</span>确认密码：<input type="password" id="passwdConfirm" placeholder="再次输入您的登陆密码"><span class="msg"></span></p>
-				<p><span>*</span>姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" id="name" placeholder="请输入姓名"><span class="msg"><a
+				<p><span>*</span>用&nbsp;&nbsp;户&nbsp;&nbsp;名：<input type="text" id="username" class="form-item" placeholder="用户名设置成功后不可修改"><span class="msg">6-30位字母、数字或"_"，字母开头</span></p>
+				<p><span>*</span>登录密码：<input type="password" id="passwd" class="form-item" placeholder="6-20位字母、数字或符号"></p>
+				<div id="passwdLevel">
+					<span class="red"></span>
+					<span class=""></span>
+					<span class=""></span>
+				</div>
+				<p id="passwdMsg" class="msg"></p>
+				<p><span>*</span>确认密码：<input type="password" id="passwdConfirm" class="form-item" placeholder="再次输入您的登陆密码"><span class="msg"></span></p>
+				<p><span>*</span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" id="name" class="form-item" placeholder="请输入姓名"><span class="msg"><a
 						 href="#" id="namerule">姓名填写规则</a></span></p>
 				<p><span>*</span>证件类型：
 					<select id="identity">
@@ -60,10 +66,10 @@
 						<option value="passport">护照</option>
 					</select>
 				</p>
-				<p><span>*</span>证件号码：<input type="text" id="idcard" placeholder="请输入您的证件号码"><span class="msg"></span></p>
-				<p>&nbsp;邮&nbsp;&nbsp;箱：<input type="email" id="email" placeholder="请正确填写邮箱地址"><span class="msg"></span></p>
-				<p><span>*</span>手机号码：<input type="text" id="phone" placeholder="请输入您的手机号码"><span class="msg">请正确填写手机号码，稍后将向该手机号码发送短信验证码</span></p>
-				<p><span>*</span>旅客类型:
+				<p><span>*</span>证件号码：<input type="text" id="idcard" class="form-item" placeholder="请输入您的证件号码"><span class="msg"></span></p>
+				<p>&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="email" id="email" class="form-item" placeholder="请正确填写邮箱地址"><span class="msg"></span></p>
+				<p><span>*</span>手机号码：<input type="text" id="phone" class="form-item" placeholder="请输入您的手机号码"><span class="msg">请正确填写手机号码，稍后将向该手机号码发送短信验证码</span></p>
+				<p><span>*</span>旅客类型：
 					<select id="passenger">
 						<option value="adult">成人</option>
 						<option value="child">儿童</option>
@@ -76,13 +82,11 @@
 				<button type="submit" id="submit">下一步</button>
 				<!-- 姓名规则 -->
 				<div id="rules">
-						<ul>
-							<li>1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</li>
-							<li>2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉子的拼音或同音字重新修改后保存。</li>
-							<li>3.姓名中有繁体字无法输入时，可用简体替代。</li>
-							<li>4.姓名较长，汉字与英文字符合计超过30个（1个汉子算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不去别大小写</li>
-						</ul>
-					</div>
+					<p>1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</p>
+					<p>2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉子的拼音或同音字重新修改后保存。</p>
+					<p>3.姓名中有繁体字无法输入时，可用简体替代。</p>
+					<p>4.姓名较长，汉字与英文字符合计超过30个（1个汉子算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不去别大小写</p>
+				</div>
 			</div>
 		</div>
 	</div>
