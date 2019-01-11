@@ -92,6 +92,10 @@
 					turnGreen(i);
 					flags[i] = true;
 					msgs[i].innerHTML = correctMsgs[itemID];
+				} else {
+					turnRed(i);
+					msgs[i].innerHTML = errorMsgs[itemID];
+					flags[i] = false;
 				}
 				return;
 			}
